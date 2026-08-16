@@ -50,7 +50,6 @@
           <li class="nav-item"><a href="#education" class="nav-link"><span class="nav-num">04.</span>Education</a></li>
           <li class="nav-item"><a href="#certifications" class="nav-link"><span class="nav-num">05.</span>Certifications</a></li>
           <li class="nav-item"><a href="#achievements" class="nav-link"><span class="nav-num">06.</span>Achievements</a></li>
-          <li class="nav-item"><a href="#contact" class="nav-link"><span class="nav-num">07.</span>Contact</a></li>
         </ul>
       </nav>
 
@@ -79,7 +78,6 @@
         <li><a href="#education" class="mobile-nav-link"><span class="nav-num">04.</span>Education</a></li>
         <li><a href="#certifications" class="mobile-nav-link"><span class="nav-num">05.</span>Certifications</a></li>
         <li><a href="#achievements" class="mobile-nav-link"><span class="nav-num">06.</span>Achievements</a></li>
-        <li><a href="#contact" class="mobile-nav-link"><span class="nav-num">07.</span>Contact</a></li>
       </ul>
       <div class="mobile-drawer-actions">
         <button class="btn btn-primary w-full" id="mobile-resume-btn">
@@ -91,105 +89,44 @@
   </div>
 
   <main>
-    <!-- HERO SECTION -->
-    <section class="hero-section" id="hero">
-      <div class="container hero-container">
-        <div class="hero-left">
-          <div class="hero-badge">
-            <span class="badge-dot"></span>
-            <span>Aspiring Software Developer • Class of 2027</span>
-          </div>
-
-          <h1 class="hero-name">Hello, I'm <span class="text-gradient">Soham Patil</span></h1>
-          <h2 class="hero-tagline">
-            Java Developer <span class="tagline-sep">|</span> Full Stack Developer
-          </h2>
-
-          <p class="hero-bio">
-            Information Science and Engineering student passionate about software development, Java, full-stack development, and building practical applications.
-          </p>
-
-          <div class="hero-cta-group">
-            <a href="#projects" class="btn btn-primary" id="hero-view-projects">
-              <i data-lucide="folder-code"></i>
-              <span>View My Projects</span>
-            </a>
-            <button class="btn btn-outline" id="hero-resume-trigger">
-              <i data-lucide="download"></i>
-              <span>Download Resume</span>
-            </button>
-            <a href="#contact" class="btn btn-glow">
-              <i data-lucide="send"></i>
-              <span>Contact Me</span>
-            </a>
-          </div>
-
-          <div class="hero-social-links">
-            <span class="social-text">Connect with me:</span>
-            <a href="https://github.com/Soham-patil18" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile" title="GitHub">
-              <i data-lucide="github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/soham-patil-108s/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile" title="LinkedIn">
-              <i data-lucide="linkedin"></i>
-            </a>
-            <a href="mailto:sohampatil49690@gmail.com" class="social-icon" aria-label="Send Email" title="Email">
-              <i data-lucide="mail"></i>
-            </a>
-          </div>
+    <!-- HERO SECTION (Centered, Clean & Focused without code box) -->
+    <section class="hero-section hero-centered" id="hero">
+      <div class="container hero-container-centered">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span>Aspiring Software Developer • Class of 2027</span>
         </div>
 
-        <!-- Hero Right: Interactive 3D Code Card -->
-        <div class="hero-right">
-          <div class="hero-card-3d">
-            <div class="card-glow-border"></div>
-            <div class="card-inner">
-              <div class="card-top-bar">
-                <div class="window-dots">
-                  <span class="dot red"></span>
-                  <span class="dot yellow"></span>
-                  <span class="dot green"></span>
-                </div>
-                <span class="code-title"><i data-lucide="terminal"></i> DeveloperProfile.java</span>
-              </div>
-              <div class="card-code-area">
-                <pre><code><span class="c-kw">public class</span> <span class="c-cls">DeveloperProfile</span> {
-  <span class="c-kw">private final String</span> name = <span class="c-str">"Soham Patil"</span>;
-  <span class="c-kw">private final String</span> degree = <span class="c-str">"B.Tech - ISE"</span>;
-  <span class="c-kw">private final String</span> college = <span class="c-str">"BEC Bagalkot"</span>;
+        <h1 class="hero-name">Hello, I'm <span class="text-gradient">Soham Patil</span></h1>
+        <h2 class="hero-tagline">
+          Java Developer <span class="tagline-sep">|</span> Full Stack Developer
+        </h2>
 
-  <span class="c-kw">public String[]</span> <span class="c-fn">getCoreSkills</span>() {
-    <span class="c-kw">return new String[]</span> {
-      <span class="c-str">"Java"</span>, <span class="c-str">"Python"</span>, <span class="c-str">"JavaScript"</span>,
-      <span class="c-str">"React.js"</span>, <span class="c-str">"Next.js"</span>, <span class="c-str">"Node.js"</span>,
-      <span class="c-str">"MongoDB"</span>, <span class="c-str">"MySQL"</span>, <span class="c-str">"Git"</span>
-    };
-  }
+        <p class="hero-bio">
+          Information Science and Engineering student at Basaveshwar Engineering College, Bagalkot. Passionate about software development, Java, full-stack development, and building practical applications.
+        </p>
 
-  <span class="c-kw">public boolean</span> <span class="c-fn">isReadyToContribute</span>() {
-    <span class="c-kw">return true</span>; <span class="c-comment">// Open to SDE & Fresher Roles</span>
-  }
-}</code></pre>
-              </div>
-              <div class="card-bottom-tags">
-                <span class="tag-pill"><i data-lucide="award"></i> 1st Prize Winner — Project Contest</span>
-                <span class="tag-pill ready"><i data-lucide="check-circle-2"></i> Ready for Entry-Level SDE Roles</span>
-              </div>
-            </div>
-          </div>
+        <div class="hero-cta-group center">
+          <a href="#projects" class="btn btn-primary" id="hero-view-projects">
+            <i data-lucide="folder-code"></i>
+            <span>View My Projects</span>
+          </a>
+          <button class="btn btn-outline" id="hero-resume-trigger">
+            <i data-lucide="download"></i>
+            <span>Download Resume</span>
+          </button>
         </div>
-      </div>
 
-      <!-- Hero Bottom Banner -->
-      <div class="hero-bottom-bar">
-        <div class="container hero-bottom-container">
-          <div>
-            <h3 class="hb-title">Let's Build Something Great Together</h3>
-            <p class="hb-sub">Looking for an enthusiastic, fast-learning developer for your engineering team?</p>
-          </div>
-          <div class="hb-btns">
-            <a href="#projects" class="btn btn-sm btn-primary">View Projects</a>
-            <a href="#contact" class="btn btn-sm btn-outline">Contact Me</a>
-          </div>
+        <div class="hero-social-links center">
+          <a href="https://github.com/Soham-patil18" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub Profile" title="GitHub">
+            <i data-lucide="github"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/soham-patil-108s/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn Profile" title="LinkedIn">
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a href="mailto:sohampatil49690@gmail.com" class="social-icon" aria-label="Send Email" title="Email">
+            <i data-lucide="mail"></i>
+          </a>
         </div>
       </div>
     </section>
@@ -271,7 +208,7 @@
                 <i data-lucide="trophy"></i>
               </div>
               <div>
-                <h4 class="fb-title">Proven Builder Mindset</h4>
+                <h4 class="fb-title">Builder Mindset</h4>
                 <p class="fb-desc">Winner of the <strong>1st Prize in Project Contest</strong> at Basaveshwar Engineering College for engineering practical software.</p>
               </div>
             </div>
@@ -518,7 +455,7 @@
               <span>Web Audio API</span>
             </div>
             <div class="p-actions">
-              <a href="https://github.com/Soham-patil18" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <a href="https://github.com/Soham-patil18/SimonGame" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
                 <i data-lucide="github"></i>
                 <span>Source Code</span>
               </a>
@@ -686,104 +623,6 @@
         </div>
       </div>
     </section>
-
-    <!-- 07. CONTACT SECTION -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section-title-wrapper">
-          <h2 class="section-heading">
-            <span class="heading-num">07.</span> Contact
-          </h2>
-          <div class="heading-line"></div>
-        </div>
-
-        <div class="contact-grid-wrap">
-          <div class="contact-left-col">
-            <h3 class="c-title">Connect With Me</h3>
-            <p class="c-subtitle">I'm actively seeking entry-level Software Developer / Java Developer opportunities. Whether you have an open position or a project inquiry, feel free to reach out directly!</p>
-
-            <div class="c-cards-stack">
-              <div class="c-card">
-                <div class="c-icon"><i data-lucide="mail"></i></div>
-                <div class="c-info">
-                  <span class="c-tag">Email Address</span>
-                  <a href="mailto:sohampatil49690@gmail.com" class="c-val">sohampatil49690@gmail.com</a>
-                </div>
-                <button class="btn-copy" data-copy="sohampatil49690@gmail.com" title="Copy Email" aria-label="Copy Email">
-                  <i data-lucide="copy"></i>
-                </button>
-              </div>
-
-              <div class="c-card">
-                <div class="c-icon"><i data-lucide="phone"></i></div>
-                <div class="c-info">
-                  <span class="c-tag">Phone Number</span>
-                  <a href="tel:+917899362940" class="c-val">+91 7899362940</a>
-                </div>
-                <button class="btn-copy" data-copy="+917899362940" title="Copy Phone Number" aria-label="Copy Phone Number">
-                  <i data-lucide="copy"></i>
-                </button>
-              </div>
-
-              <div class="c-card">
-                <div class="c-icon"><i data-lucide="map-pin"></i></div>
-                <div class="c-info">
-                  <span class="c-tag">Location</span>
-                  <span class="c-val">Bagalkot, Karnataka, India</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="c-socials-row">
-              <a href="https://github.com/Soham-patil18" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                <i data-lucide="github"></i>
-                <span>GitHub Profile</span>
-              </a>
-              <a href="https://www.linkedin.com/in/soham-patil-108s/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
-                <i data-lucide="linkedin"></i>
-                <span>LinkedIn</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Contact Form -->
-          <div class="contact-right-col">
-            <div class="form-container-card">
-              <h3 class="form-title">Send a Direct Message</h3>
-              <form id="contact-form" novalidate>
-                <div class="form-field">
-                  <label for="contact-name">Name <span class="star">*</span></label>
-                  <input type="text" id="contact-name" name="name" placeholder="Your name" required>
-                  <span class="err-msg">Please enter your name</span>
-                </div>
-
-                <div class="form-field">
-                  <label for="contact-email">Email <span class="star">*</span></label>
-                  <input type="email" id="contact-email" name="email" placeholder="Your email address" required>
-                  <span class="err-msg">Please enter a valid email</span>
-                </div>
-
-                <div class="form-field">
-                  <label for="contact-subject">Subject</label>
-                  <input type="text" id="contact-subject" name="subject" placeholder="Opportunity / Project Inquiry">
-                </div>
-
-                <div class="form-field">
-                  <label for="contact-message">Message <span class="star">*</span></label>
-                  <textarea id="contact-message" name="message" rows="5" placeholder="Hi Soham, I came across your portfolio and would like to discuss..." required></textarea>
-                  <span class="err-msg">Please enter your message</span>
-                </div>
-
-                <button type="submit" class="btn btn-primary w-full" id="contact-submit-btn">
-                  <i data-lucide="send"></i>
-                  <span>Send Message</span>
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- FOOTER -->
@@ -801,7 +640,6 @@
         <a href="#education">Education</a>
         <a href="#certifications">Certifications</a>
         <a href="#achievements">Achievements</a>
-        <a href="#contact">Contact</a>
       </div>
 
       <div class="footer-social-icons">
