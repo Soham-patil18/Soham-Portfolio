@@ -905,8 +905,8 @@
             </div>
           </div>
 
-          <!-- Project 8: BMW Showcase Clone -->
-          <div class="project-showcase-card">
+          <!-- Project 8: BMW Showcase Clone (With 2-Second Animated Carousel) -->
+          <div class="project-showcase-card featured-project-card">
             <div class="p-card-top">
               <div class="p-type-tag">
                 <i data-lucide="car"></i>
@@ -914,12 +914,60 @@
               </div>
               <span class="p-date">Feb 2025</span>
             </div>
+            
             <h3 class="p-title">BMW Showcase Clone — Luxury Automotive Landing Page</h3>
+
+            <!-- 2-Second Continuous Animated Image Carousel for BMW Clone -->
+            <div class="project-carousel-wrapper" id="bmwclone-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide active" data-index="0">
+                  <img src="assets/projects/bmwclone/bmw-clone-live-homepage.png" alt="BMW Clone Sheer Driving Pleasure Live Homepage" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="compass"></i> BMW Sheer Driving Pleasure & Heritage Facts</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="1">
+                  <img src="assets/projects/bmwclone/bmw-clone-idrive-models.png" alt="BMW Clone iDrive Evolution and Models Quiz" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="cpu"></i> BMW iDrive Connectivity & Interactive Model Quiz</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="2">
+                  <img src="assets/projects/bmwclone/bmw-clone-news-footer.png" alt="BMW Clone News and Multi-Column Site Footer" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="newspaper"></i> BMW News, Interior Gallery & Footer</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="3">
+                  <img src="assets/projects/bmwclone/bmw-clone-banner.png" alt="BMW Clone Emblem and Cockpit Mockup" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="shield"></i> BMW Brand Emblem & Cockpit Interface</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel Controls -->
+              <button class="carousel-btn prev-btn" id="bmw-prev-btn" aria-label="Previous Slide">
+                <i data-lucide="chevron-left"></i>
+              </button>
+              <button class="carousel-btn next-btn" id="bmw-next-btn" aria-label="Next Slide">
+                <i data-lucide="chevron-right"></i>
+              </button>
+
+              <!-- Carousel Indicators -->
+              <div class="carousel-dots" id="bmw-dots">
+                <button class="dot-btn active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="dot-btn" data-slide="1" aria-label="Slide 2"></button>
+                <button class="dot-btn" data-slide="2" aria-label="Slide 3"></button>
+                <button class="dot-btn" data-slide="3" aria-label="Slide 4"></button>
+              </div>
+            </div>
+
             <p class="p-desc">
-              Premium automotive showcase landing page for BMW, featuring high-resolution hero banners, vehicle specifications grid, and interactive model exploration tabs.
+              Premium automotive showcase landing page for BMW, featuring high-resolution hero banners, BMW history facts slider, iDrive interactive technology showcase, and comprehensive multi-tier footer navigation.
             </p>
             <ul class="p-highlights">
-              <li><i data-lucide="check-circle-2"></i> Implemented full-bleed hero video/banner section with luxury brand typography.</li>
+              <li><i data-lucide="check-circle-2"></i> Implemented full-bleed hero video/banner section with luxury brand typography and heritage facts.</li>
               <li><i data-lucide="check-circle-2"></i> Created interactive vehicle specs grid with acceleration, horsepower, and torque metric highlights.</li>
             </ul>
             <div class="p-tech-row">
@@ -930,9 +978,13 @@
               <span>JavaScript</span>
             </div>
             <div class="p-actions">
-              <a href="https://github.com/Soham-patil18" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <a href="https://github.com/Soham-patil18/BMWClone" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
                 <i data-lucide="github"></i>
                 <span>Source Code</span>
+              </a>
+              <a href="https://soham-patil18.github.io/BMWClone/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                <i data-lucide="external-link"></i>
+                <span>Live Demo</span>
               </a>
             </div>
           </div>

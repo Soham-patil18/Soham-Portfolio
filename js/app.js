@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoplay();
   }
 
-  // Initialize NammaKisan, BEC Bill Desk, InterviewIQ, Simon Game, Amazon, Spotify, and Flipkart carousels
+  // Initialize NammaKisan, BEC Bill Desk, InterviewIQ, Simon Game, Amazon, Spotify, Flipkart, and BMW carousels
   setupProjectCarousel('nammakisan-carousel', 'nk-prev-btn', 'nk-next-btn');
   setupProjectCarousel('becbilldesk-carousel', 'bbd-prev-btn', 'bbd-next-btn');
   setupProjectCarousel('interviewiq-carousel', 'iiq-prev-btn', 'iiq-next-btn');
@@ -163,6 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupProjectCarousel('amazonclone-carousel', 'amz-prev-btn', 'amz-next-btn');
   setupProjectCarousel('spotifyclone-carousel', 'sp-prev-btn', 'sp-next-btn');
   setupProjectCarousel('flipkartclone-carousel', 'fk-prev-btn', 'fk-next-btn');
+  setupProjectCarousel('bmwclone-carousel', 'bmw-prev-btn', 'bmw-next-btn');
 
   /* --------------------------------------------------------------------------
      3. Sticky Navbar & Active Scroll Spy
