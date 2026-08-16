@@ -676,7 +676,7 @@ h1, h2, h3, h4, h5, h6 {
 .skill-pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   padding: 8px 16px;
   background: var(--bg-surface-raised);
   border: 1px solid var(--border-subtle);
@@ -688,10 +688,24 @@ h1, h2, h3, h4, h5, h6 {
   transition: var(--transition);
 }
 
+.skill-logo-icon {
+  font-size: 1.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
 .skill-pill:hover {
   border-color: var(--accent-blue);
   background: rgba(41, 121, 255, 0.15);
   transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(41, 121, 255, 0.25);
+}
+
+.skill-pill:hover .skill-logo-icon {
+  transform: scale(1.18);
 }
 
 .skill-pill.highlight {
