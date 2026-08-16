@@ -776,8 +776,8 @@
             </div>
           </div>
 
-          <!-- Project 7: Flipkart Clone -->
-          <div class="project-showcase-card">
+          <!-- Project 7: Flipkart Clone (With 2-Second Animated Carousel) -->
+          <div class="project-showcase-card featured-project-card">
             <div class="p-card-top">
               <div class="p-type-tag">
                 <i data-lucide="shopping-bag"></i>
@@ -785,13 +785,54 @@
               </div>
               <span class="p-date">Feb 2025</span>
             </div>
+            
             <h3 class="p-title">Flipkart UI Clone — Responsive Shopping Layout</h3>
+
+            <!-- 2-Second Continuous Animated Image Carousel for Flipkart Clone -->
+            <div class="project-carousel-wrapper" id="flipkartclone-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide active" data-index="0">
+                  <img src="assets/projects/flipkartclone/flipkart-clone-live-demo.png" alt="Flipkart Clone Live Demo and Best of Electronics" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="shopping-cart"></i> Flipkart Categories & Best of Electronics Grid</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="1">
+                  <img src="assets/projects/flipkartclone/flipkart-clone-banner.png" alt="Flipkart Clone Banner and Category Icons" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="tag"></i> Flipkart Branding & Category Bar</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="2">
+                  <img src="assets/projects/flipkartclone/flipkart-clone-page-layouts.png" alt="Flipkart Clone Multi-Device Page Layouts" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="layout"></i> Responsive Product Listings & Layouts</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel Controls -->
+              <button class="carousel-btn prev-btn" id="fk-prev-btn" aria-label="Previous Slide">
+                <i data-lucide="chevron-left"></i>
+              </button>
+              <button class="carousel-btn next-btn" id="fk-next-btn" aria-label="Next Slide">
+                <i data-lucide="chevron-right"></i>
+              </button>
+
+              <!-- Carousel Indicators -->
+              <div class="carousel-dots" id="fk-dots">
+                <button class="dot-btn active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="dot-btn" data-slide="1" aria-label="Slide 2"></button>
+                <button class="dot-btn" data-slide="2" aria-label="Slide 3"></button>
+              </div>
+            </div>
+
             <p class="p-desc">
-              Full-featured frontend clone of Flipkart e-commerce platform designed to master Indian e-commerce layouts, category navigation pills, and dynamic deal banners.
+              Full-featured frontend clone of the Flipkart e-commerce platform built to master Indian e-commerce layouts, category navigation pills, dynamic deal banners, and product showcase carousels.
             </p>
             <ul class="p-highlights">
-              <li><i data-lucide="check-circle-2"></i> Structured category navigation row with custom icon pills and dropdown submenus.</li>
-              <li><i data-lucide="check-circle-2"></i> Built deals-of-the-day product carousels with pricing discount tags.</li>
+              <li><i data-lucide="check-circle-2"></i> Structured category navigation row (Grocery, Mobiles, Fashion, Electronics, Home) with custom icons.</li>
+              <li><i data-lucide="check-circle-2"></i> Built deals-of-the-day product grids with pricing discount tags and gaming laptop promotional banners.</li>
             </ul>
             <div class="p-tech-row">
               <span>HTML5</span>
@@ -801,9 +842,13 @@
               <span>JavaScript</span>
             </div>
             <div class="p-actions">
-              <a href="https://github.com/Soham-patil18" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+              <a href="https://github.com/Soham-patil18/FlipkartClone" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
                 <i data-lucide="github"></i>
                 <span>Source Code</span>
+              </a>
+              <a href="https://soham-patil18.github.io/FlipkartClone/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                <i data-lucide="external-link"></i>
+                <span>Live Demo</span>
               </a>
             </div>
           </div>
