@@ -418,8 +418,8 @@
             </div>
           </div>
 
-          <!-- Project 2: BEC-BillDesk -->
-          <div class="project-showcase-card">
+          <!-- Project 2: BEC-BillDesk (With 2-Second Animated Carousel) -->
+          <div class="project-showcase-card featured-project-card">
             <div class="p-card-top">
               <div class="p-type-tag">
                 <i data-lucide="credit-card"></i>
@@ -427,13 +427,68 @@
               </div>
               <span class="p-date">Mar 2025</span>
             </div>
+            
             <h3 class="p-title">BEC Bill Desk — Online College Fee Payment System</h3>
+
+            <!-- 2-Second Continuous Animated Image Carousel for BEC Bill Desk -->
+            <div class="project-carousel-wrapper" id="becbilldesk-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide active" data-index="0">
+                  <img src="assets/projects/becbilldesk/becbilldesk-hero-portal.png" alt="BEC Bill Desk College Fees Portal Homepage" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="building-2"></i> BEC College Fees Portal Homepage</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="1">
+                  <img src="assets/projects/becbilldesk/becbilldesk-student-login.png" alt="BEC Bill Desk USN Student Login" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="user-check"></i> USN Student Authentication Portal</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="2">
+                  <img src="assets/projects/becbilldesk/becbilldesk-features-overview.png" alt="BEC Bill Desk Secure Payments & History" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="shield-check"></i> Secure Payments & Transaction History</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="3">
+                  <img src="assets/projects/becbilldesk/becbilldesk-footer-fee-types.png" alt="BEC Bill Desk Fee Types & Support" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="receipt"></i> Multi-Category Fee Breakdown (Hostel, Exam, Tuition)</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="4">
+                  <img src="assets/projects/becbilldesk/becbilldesk-splash-loader.png" alt="BEC Bill Desk Animated Payment Gateway Loader" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="loader"></i> Interactive Payment Gateway Loader</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel Controls -->
+              <button class="carousel-btn prev-btn" id="bbd-prev-btn" aria-label="Previous Slide">
+                <i data-lucide="chevron-left"></i>
+              </button>
+              <button class="carousel-btn next-btn" id="bbd-next-btn" aria-label="Next Slide">
+                <i data-lucide="chevron-right"></i>
+              </button>
+
+              <!-- Carousel Indicators -->
+              <div class="carousel-dots" id="bbd-dots">
+                <button class="dot-btn active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="dot-btn" data-slide="1" aria-label="Slide 2"></button>
+                <button class="dot-btn" data-slide="2" aria-label="Slide 3"></button>
+                <button class="dot-btn" data-slide="3" aria-label="Slide 4"></button>
+                <button class="dot-btn" data-slide="4" aria-label="Slide 5"></button>
+              </div>
+            </div>
+
             <p class="p-desc">
-              Developed an online fee payment system using Java, Python, HTML5, CSS3, and Bootstrap, allowing students to view fee details and manage their payments online with structured transaction histories.
+              Developed an online fee payment system for Basaveshwar Engineering College using Java, Python, HTML5, CSS3, and Bootstrap, allowing students to view fee details, pay online securely, and manage transaction receipts.
             </p>
             <ul class="p-highlights">
-              <li><i data-lucide="check-circle-2"></i> Implemented MySQL database to store and manage student, fee, and payment-related information with efficient CRUD operations.</li>
-              <li><i data-lucide="check-circle-2"></i> Designed a responsive and user-friendly interface with Git and GitHub used for version control.</li>
+              <li><i data-lucide="check-circle-2"></i> Implemented MySQL database to store and manage student records, fee categories, and payment transactions with efficient CRUD operations.</li>
+              <li><i data-lucide="check-circle-2"></i> Designed a responsive student portal with USN authentication and multi-channel payment method integration.</li>
             </ul>
             <div class="p-tech-row">
               <span>Java</span>
@@ -448,6 +503,10 @@
               <a href="https://github.com/Soham-patil18/BEC-Bill-Desk" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
                 <i data-lucide="github"></i>
                 <span>Source Code</span>
+              </a>
+              <a href="https://sangam_gaddi.github.io/BECBILLDESK/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                <i data-lucide="external-link"></i>
+                <span>Live Demo</span>
               </a>
             </div>
           </div>

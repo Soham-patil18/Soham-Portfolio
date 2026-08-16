@@ -155,8 +155,9 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoplay();
   }
 
-  // Initialize NammaKisan and InterviewIQ carousels
+  // Initialize NammaKisan, BEC Bill Desk, and InterviewIQ carousels
   setupProjectCarousel('nammakisan-carousel', 'nk-prev-btn', 'nk-next-btn');
+  setupProjectCarousel('becbilldesk-carousel', 'bbd-prev-btn', 'bbd-next-btn');
   setupProjectCarousel('interviewiq-carousel', 'iiq-prev-btn', 'iiq-next-btn');
 
   /* --------------------------------------------------------------------------
