@@ -1,6 +1,6 @@
 /**
  * Soham Patil Portfolio — Main Application Script
- * Interactive Constellation Canvas, Scroll-Spy Navigation, High-Res Certificate Previews, Modals & Audio Synthesizer
+ * Interactive Constellation Canvas, 2-Second Continuous Project Carousel, High-Res Certificate Previews, Modals & Audio Synthesizer
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -85,7 +85,73 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     2. Sticky Navbar & Active Scroll Spy
+     2. NammaKisan 2-Second Continuous Animated Carousel
+     -------------------------------------------------------------------------- */
+  const carouselWrapper = document.getElementById('nammakisan-carousel');
+  if (carouselWrapper) {
+    const slides = carouselWrapper.querySelectorAll('.carousel-slide');
+    const dots = carouselWrapper.querySelectorAll('.dot-btn');
+    const prevBtn = document.getElementById('nk-prev-btn');
+    const nextBtn = document.getElementById('nk-next-btn');
+    let currentSlide = 0;
+    let autoplayInterval = null;
+
+    function goToSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      dots[currentSlide].classList.remove('active');
+      currentSlide = (index + slides.length) % slides.length;
+      slides[currentSlide].classList.add('active');
+      dots[currentSlide].classList.add('active');
+      if (window.lucide) lucide.createIcons();
+    }
+
+    function nextSlide() {
+      goToSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      goToSlide(currentSlide - 1);
+    }
+
+    function startAutoplay() {
+      if (autoplayInterval) clearInterval(autoplayInterval);
+      autoplayInterval = setInterval(nextSlide, 2000); // exact 2 seconds
+    }
+
+    function stopAutoplay() {
+      if (autoplayInterval) clearInterval(autoplayInterval);
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        startAutoplay();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        startAutoplay();
+      });
+    }
+
+    dots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => {
+        goToSlide(idx);
+        startAutoplay();
+      });
+    });
+
+    carouselWrapper.addEventListener('mouseenter', stopAutoplay);
+    carouselWrapper.addEventListener('mouseleave', startAutoplay);
+
+    // Initial launch of 2-second continuous animation
+    startAutoplay();
+  }
+
+  /* --------------------------------------------------------------------------
+     3. Sticky Navbar & Active Scroll Spy
      -------------------------------------------------------------------------- */
   const navbar = document.getElementById('navbar');
   const sections = document.querySelectorAll('section[id]');
@@ -137,7 +203,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     3. Mobile Navigation Drawer
+     4. Mobile Navigation Drawer
      -------------------------------------------------------------------------- */
   const mobileToggle = document.getElementById('mobile-toggle');
   const mobileDrawer = document.getElementById('mobile-drawer');
@@ -171,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     4. Modals Management (Resume, Certificate, Simon Game)
+     5. Modals Management (Resume, Certificate, Simon Game)
      -------------------------------------------------------------------------- */
   const resumeModal = document.getElementById('resume-modal');
   const certModal = document.getElementById('cert-modal');
@@ -324,7 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* --------------------------------------------------------------------------
-     5. Simon Game Engine (Web Audio API Synthesizer)
+     6. Simon Game Engine (Web Audio API Synthesizer)
      -------------------------------------------------------------------------- */
   const buttonColors = ["green", "red", "yellow", "blue"];
   let gamePattern = [];

@@ -324,8 +324,8 @@
         </div>
 
         <div class="projects-list">
-          <!-- Project 1: NammaKisan -->
-          <div class="project-showcase-card">
+          <!-- Project 1: NammaKisan (With 2-Second Animated Carousel) -->
+          <div class="project-showcase-card featured-project-card">
             <div class="p-card-top">
               <div class="p-type-tag">
                 <i data-lucide="layers"></i>
@@ -333,7 +333,67 @@
               </div>
               <span class="p-date">Dec 2025</span>
             </div>
+            
             <h3 class="p-title">NammaKisan — Farmer-to-Consumer Platform</h3>
+
+            <!-- 2-Second Continuous Animated Image Carousel -->
+            <div class="project-carousel-wrapper" id="nammakisan-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide active" data-index="0">
+                  <img src="assets/projects/nammakisan/nammakisan-dashboard-overview.png" alt="NammaKisan Admin Dashboard & Produce Catalog" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="layout-dashboard"></i> Admin Dashboard & Produce Catalog</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="1">
+                  <img src="assets/projects/nammakisan/nammakisan-add-product.png" alt="NammaKisan Add Product & Farmer Inventory" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="plus-circle"></i> Farmer Produce Listing & Inventory</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="2">
+                  <img src="assets/projects/nammakisan/nammakisan-orders-management.png" alt="NammaKisan Customer Orders Management" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="shopping-bag"></i> Live Customer Orders Management</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="3">
+                  <img src="assets/projects/nammakisan/nammakisan-admin-login.jpg" alt="NammaKisan Admin Authentication Portal" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="shield-check"></i> Secure Admin & Farmer Authentication</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="4">
+                  <img src="assets/projects/nammakisan/nammakisan-order-delivered-review.png" alt="NammaKisan Order Tracking & Customer Reviews" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="check-circle-2"></i> Order Delivery & Customer Reviews</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel Controls -->
+              <button class="carousel-btn prev-btn" id="nk-prev-btn" aria-label="Previous Slide">
+                <i data-lucide="chevron-left"></i>
+              </button>
+              <button class="carousel-btn next-btn" id="nk-next-btn" aria-label="Next Slide">
+                <i data-lucide="chevron-right"></i>
+              </button>
+
+              <!-- Carousel Indicators -->
+              <div class="carousel-dots" id="nk-dots">
+                <button class="dot-btn active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="dot-btn" data-slide="1" aria-label="Slide 2"></button>
+                <button class="dot-btn" data-slide="2" aria-label="Slide 3"></button>
+                <button class="dot-btn" data-slide="3" aria-label="Slide 4"></button>
+                <button class="dot-btn" data-slide="4" aria-label="Slide 5"></button>
+              </div>
+
+              <div class="carousel-autoplay-indicator">
+                <span class="pulse-dot"></span>
+                <span>Auto-playing every 2s</span>
+              </div>
+            </div>
+
             <p class="p-desc">
               A full-stack web application built to connect farmers directly with consumers, providing a responsive and user-friendly interface, online marketplace for agricultural produce, and inventory management.
             </p>
