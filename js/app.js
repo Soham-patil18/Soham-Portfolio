@@ -155,10 +155,11 @@ document.addEventListener('DOMContentLoaded', () => {
     startAutoplay();
   }
 
-  // Initialize NammaKisan, BEC Bill Desk, InterviewIQ, and Amazon Clone carousels
+  // Initialize NammaKisan, BEC Bill Desk, InterviewIQ, Simon Game, and Amazon Clone carousels
   setupProjectCarousel('nammakisan-carousel', 'nk-prev-btn', 'nk-next-btn');
   setupProjectCarousel('becbilldesk-carousel', 'bbd-prev-btn', 'bbd-next-btn');
   setupProjectCarousel('interviewiq-carousel', 'iiq-prev-btn', 'iiq-next-btn');
+  setupProjectCarousel('simongame-carousel', 'sg-prev-btn', 'sg-next-btn');
   setupProjectCarousel('amazonclone-carousel', 'amz-prev-btn', 'amz-next-btn');
 
   /* --------------------------------------------------------------------------

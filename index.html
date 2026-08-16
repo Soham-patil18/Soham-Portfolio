@@ -601,8 +601,8 @@
             </div>
           </div>
 
-          <!-- Project 4: Simon Game (Playable Demo!) -->
-          <div class="project-showcase-card">
+          <!-- Project 4: Simon Game (With 2-Second Animated Carousel & Playable Demo!) -->
+          <div class="project-showcase-card featured-project-card">
             <div class="p-card-top">
               <div class="p-type-tag">
                 <i data-lucide="gamepad-2"></i>
@@ -610,13 +610,48 @@
               </div>
               <span class="p-date">Feb 2025</span>
             </div>
+            
             <h3 class="p-title">Simon's Game — Memory Sequencing App</h3>
+
+            <!-- 2-Second Continuous Animated Image Carousel for Simon Game -->
+            <div class="project-carousel-wrapper" id="simongame-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide active" data-index="0">
+                  <img src="assets/projects/simongame/simon-game-banner.png" alt="Simon Says Game Banner and Color Sequence" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="gamepad"></i> Simon Says Interactive Color Sequencing</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="1">
+                  <img src="assets/projects/simongame/simon-game-gameplay-over.png" alt="Simon Game Gameplay and Score Screen" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="play-circle"></i> Active Gameplay & Dynamic Score Tracking</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel Controls -->
+              <button class="carousel-btn prev-btn" id="sg-prev-btn" aria-label="Previous Slide">
+                <i data-lucide="chevron-left"></i>
+              </button>
+              <button class="carousel-btn next-btn" id="sg-next-btn" aria-label="Next Slide">
+                <i data-lucide="chevron-right"></i>
+              </button>
+
+              <!-- Carousel Indicators -->
+              <div class="carousel-dots" id="sg-dots">
+                <button class="dot-btn active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="dot-btn" data-slide="1" aria-label="Slide 2"></button>
+              </div>
+            </div>
+
             <p class="p-desc">
-              JavaScript memory game developed with improved event handling for 40% faster responsiveness and real-time audio-visual cues.
+              A fun and interactive browser-based memory sequencing game built with HTML, CSS, and vanilla JavaScript. Tests memory and concentration by progressively increasing the sequence length with real-time audio-visual cues and improved event handling for 40% faster responsiveness.
             </p>
             <ul class="p-highlights">
-              <li><i data-lucide="check-circle-2"></i> Dynamic pattern generation with progressive difficulty and audio feedback.</li>
-              <li><i data-lucide="check-circle-2"></i> Integrated Web Audio API sound synthesizer for instant in-browser playback.</li>
+              <li><i data-lucide="check-circle-2"></i> Dynamic algorithmic pattern generation with progressive difficulty.</li>
+              <li><i data-lucide="check-circle-2"></i> Integrated Web Audio API sound synthesizer for instant browser playback without external audio files.</li>
+              <li><i data-lucide="check-circle-2"></i> High score persistence and responsive layout.</li>
             </ul>
             <div class="p-tech-row">
               <span>HTML5</span>
