@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Soham Patil — B.Tech Information Science & Engineering student and aspiring Java & Full Stack Developer. Explore projects, technical skills, and certifications.">
+  <meta name="keywords" content="Soham Patil, Java Developer, Full Stack Developer, Software Engineer Fresher, Basaveshwar Engineering College, React, Node.js, Next.js, Portfolio">
+  <meta name="author" content="Soham Patil">
+  <meta property="og:title" content="Soham Patil | Java Developer & Full Stack Developer">
+  <meta property="og:description" content="Information Science and Engineering student passionate about software development, Java, full-stack development, and building practical applications.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://portfolio-nine-lyart-56.vercel.app/">
+
+  <title>Soham Patil | Java Developer & Full Stack Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Background Ambient Glows -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Soham Patil Home">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">Soham Patil</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+          <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
+          <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right Nav Actions -->
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="btn-icon" aria-label="Toggle light and dark mode" title="Switch Theme">
+          <i data-lucide="sun" class="icon-sun"></i>
+          <i data-lucide="moon" class="icon-moon"></i>
+        </button>
+
+        <!-- Resume Modal CTA -->
+        <button id="nav-resume-btn" class="btn btn-sm btn-outline nav-resume-btn" aria-label="View Resume">
+          <i data-lucide="file-text" class="btn-icon-svg"></i>
+          <span>Resume</span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-toggle" class="mobile-toggle btn-icon" aria-label="Toggle navigation menu" aria-expanded="false">
+          <i data-lucide="menu" class="icon-menu"></i>
+          <i data-lucide="x" class="icon-close"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <ul class="mobile-nav-list">
+        <li><a href="#home" class="mobile-nav-link active">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#certifications" class="mobile-nav-link">Certifications</a></li>
+        <li><a href="#education" class="mobile-nav-link">Education</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-footer">
+        <button class="btn btn-primary w-full" id="mobile-resume-btn">
+          <i data-lucide="file-text"></i>
+          <span>View & Download Resume</span>
+        </button>
+        <div class="mobile-socials">
+          <a href="https://github.com/Soham-patil18" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <i data-lucide="github"></i>
+          </a>
+          <a href="https://linkedin.com/in/soham-patil-108s/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a href="mailto:sohampatil49690@gmail.com" aria-label="Email">
+            <i data-lucide="mail"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="home">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- Status Badge -->
+          <div class="status-badge fade-in">
+            <span class="status-dot"></span>
+            <span>Aspiring Software Developer • Class of 2027</span>
+          </div>
+
+          <!-- Main Hero Greeting & Name -->
+          <h1 class="hero-title fade-in">
+            Hello, I'm <span class="text-highlight">Soham Patil</span>
+          </h1>
+
+          <!-- Role / Subtitle -->
+          <div class="hero-roles-wrapper fade-in">
+            <p class="hero-role">Java Developer <span class="role-separator">|</span> Full Stack Developer</p>
+          </div>
+
+          <!-- Short Professional Introduction -->
+          <p class="hero-intro fade-in">
+            Information Science and Engineering student passionate about software development, Java, full-stack development, and building practical applications.
+          </p>
+
+          <!-- Action Buttons -->
+          <div class="hero-cta-group fade-in">
+            <a href="#projects" class="btn btn-primary" id="hero-view-projects">
+              <i data-lucide="folder-code"></i>
+              <span>View My Projects</span>
+            </a>
+            <button class="btn btn-secondary" id="hero-resume-trigger">
+              <i data-lucide="download"></i>
+              <span>Download Resume</span>
+            </button>
+          </div>
+
+          <!-- Social Links Bar -->
+          <div class="hero-social-bar fade-in">
+            <span class="social-label">Connect with me:</span>
+            <div class="social-icons">
+              <a href="https://github.com/Soham-patil18" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub Profile" title="GitHub">
+                <i data-lucide="github"></i>
+                <span class="tooltip">GitHub</span>
+              </a>
+              <a href="https://linkedin.com/in/soham-patil-108s/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn Profile" title="LinkedIn">
+                <i data-lucide="linkedin"></i>
+                <span class="tooltip">LinkedIn</span>
+              </a>
+              <a href="mailto:sohampatil49690@gmail.com" class="social-link" aria-label="Send Email" title="Email">
+                <i data-lucide="mail"></i>
+                <span class="tooltip">Email</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Code Card -->
+        <div class="hero-visual fade-in">
+          <div class="code-card">
+            <div class="code-card-header">
+              <div class="window-controls">
+                <span class="control close"></span>
+                <span class="control minimize"></span>
+                <span class="control expand"></span>
+              </div>
+              <div class="code-tab">
+                <i data-lucide="file-code" class="tab-icon"></i>
+                <span>DeveloperProfile.java</span>
+              </div>
+            </div>
+            <div class="code-card-body">
+              <pre><code><span class="code-keyword">public class</span> <span class="code-class">DeveloperProfile</span> {
+  <span class="code-keyword">private String</span> name = <span class="code-string">"Soham Patil"</span>;
+  <span class="code-keyword">private String</span> degree = <span class="code-string">"B.Tech - ISE"</span>;
+  <span class="code-keyword">private String</span> college = <span class="code-string">"BEC Bagalkot"</span>;
+  <span class="code-keyword">private int</span> graduationYear = <span class="code-number">2027</span>;
+
+  <span class="code-keyword">public String[]</span> <span class="code-func">getCoreSkills</span>() {
+    <span class="code-keyword">return new String[]</span> {
+      <span class="code-string">"Java"</span>, <span class="code-string">"Python"</span>, <span class="code-string">"JavaScript"</span>,
+      <span class="code-string">"React.js"</span>, <span class="code-string">"Node.js"</span>, <span class="code-string">"MongoDB"</span>, <span class="code-string">"MySQL"</span>
+    };
+  }
+
+  <span class="code-keyword">public boolean</span> <span class="code-func">isReadyToContribute</span>() {
+    <span class="code-keyword">return true</span>; <span class="code-comment">// Open to Fresher Roles</span>
+  }
+}</code></pre>
+            </div>
+            <div class="code-card-footer">
+              <div class="footer-stat">
+                <i data-lucide="award" class="stat-icon"></i>
+                <span>1st Prize Project Contest Winner</span>
+              </div>
+              <div class="footer-stat">
+                <i data-lucide="check-circle-2" class="stat-icon green"></i>
+                <span>Ready for SDE Opportunities</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Bottom CTA Banner (User requirement) -->
+      <div class="hero-bottom-cta-banner">
+        <div class="container banner-inner">
+          <div class="banner-text">
+            <h3 class="banner-title">Let's Build Something Great Together</h3>
+            <p class="banner-subtitle">Looking for an enthusiastic, fast-learning developer for your team?</p>
+          </div>
+          <div class="banner-actions">
+            <a href="#projects" class="btn btn-sm btn-primary">
+              <i data-lucide="grid"></i>
+              <span>View Projects</span>
+            </a>
+            <a href="#contact" class="btn btn-sm btn-outline">
+              <i data-lucide="send"></i>
+              <span>Contact Me</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Get to Know Me</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card main-bio-card">
+            <div class="bio-icon-wrapper">
+              <i data-lucide="user-check"></i>
+            </div>
+            <h3 class="bio-heading">Information Science & Engineering Student</h3>
+            <p class="bio-paragraph">
+              I am a pre-final year <strong>B.Tech Information Science and Engineering</strong> student at <strong>Basaveshwar Engineering College, Bagalkot</strong> (Graduation: 2027). I am passionate about software engineering, object-oriented programming in <strong>Java</strong>, and building clean, responsive full-stack web applications.
+            </p>
+            <p class="bio-paragraph">
+              As an aspiring software developer, I focus on understanding computer science fundamentals (DSA, OOP, Java Collections, and Database Systems) and turning real-world problem statements into practical, functional solutions. I am a self-driven learner, quick to adapt to modern engineering stacks, and eager to contribute to real-world engineering teams as an entry-level developer.
+            </p>
+            <div class="bio-highlights">
+              <div class="highlight-item">
+                <i data-lucide="map-pin" class="hl-icon"></i>
+                <div>
+                  <strong>Location:</strong>
+                  <span>Bagalkot, Karnataka, India</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="graduation-cap" class="hl-icon"></i>
+                <div>
+                  <strong>Degree:</strong>
+                  <span>B.Tech in ISE (2023 - 2027)</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="mail" class="hl-icon"></i>
+                <div>
+                  <strong>Email:</strong>
+                  <span>sohampatil49690@gmail.com</span>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <i data-lucide="phone" class="hl-icon"></i>
+                <div>
+                  <strong>Phone:</strong>
+                  <span>+91 7899362940</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Cards / Core Pillars -->
+          <div class="about-pillars">
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <i data-lucide="coffee"></i>
+              </div>
+              <div class="pillar-content">
+                <h4>Java & Backend Logic</h4>
+                <p>Strong understanding of Java OOP principles, Collections Framework, Exception Handling, and building structured application logic.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <i data-lucide="layout"></i>
+              </div>
+              <div class="pillar-content">
+                <h4>Full Stack Development</h4>
+                <p>Hands-on experience developing end-to-end applications using React.js, Next.js, Node.js, Express.js, MongoDB, and MySQL.</p>
+              </div>
+            </div>
+
+            <div class="pillar-card">
+              <div class="pillar-icon">
+                <i data-lucide="trophy"></i>
+              </div>
+              <div class="pillar-content">
+                <h4>Proven Builder Mindset</h4>
+                <p>Winner of the <strong>1st Prize in Project Contest</strong> at Basaveshwar Engineering College for building practical software solutions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Technical Proficiency</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <p class="section-description">Technologies and tools strictly curated from my academic coursework, verified certifications, and active hands-on projects.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="skills-categories-grid">
+          <!-- Programming Languages -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i data-lucide="terminal"></i>
+              </div>
+              <h3 class="category-title">Programming Languages</h3>
+            </div>
+            <div class="skills-pill-list">
+              <div class="skill-badge primary">
+                <span class="skill-dot"></span>
+                <span class="skill-name">Java</span>
+                <span class="skill-tag">Core & OOP</span>
+              </div>
+              <div class="skill-badge primary">
+                <span class="skill-dot"></span>
+                <span class="skill-name">Python</span>
+                <span class="skill-tag">Scripting & Logic</span>
+              </div>
+              <div class="skill-badge">
+                <span class="skill-dot"></span>
+                <span class="skill-name">C</span>
+                <span class="skill-tag">Fundamentals</span>
+              </div>
+              <div class="skill-badge primary">
+                <span class="skill-dot"></span>
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-tag">ES6+</span>
+              </div>
+              <div class="skill-badge">
+                <span class="skill-dot"></span>
+                <span class="skill-name">SQL</span>
+                <span class="skill-tag">Queries & Joins</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Frontend / Web Technologies -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i data-lucide="code-2"></i>
+              </div>
+              <h3 class="category-title">Frontend Technologies</h3>
+            </div>
+            <div class="skills-pill-list">
+              <div class="skill-badge primary">
+                <span class="skill-dot"></span>
+                <span class="skill-name">React.js</span>
+                <span class="skill-tag">Components & Hooks</span>
+              </div>
+              <div class="skill-badge primary">
+                <span class="skill-dot"></span>
+                <span class="skill-name">Next.js</span>
+                <span class="skill-tag">Full Stack React</span>
+              </div>
+              <div class="skill-badge">
+                <span class="skill-dot"></span>
+                <span class="skill-name">HTML5</span>
+                <span class="skill-tag">Semantic Structure</span>
+              </div>
+              <div class="skill-badge">
+                <span class="skill-dot"></span>
+                <span class="skill-name">CSS3</span>
+                <span class="skill-tag">Flexbox & Grid</span>
+              </div>
+              <div class="skill-badge">
+                <span class="skill-dot"></span>
+                <span class="skill-name">Bootstrap</span>
+                <span class="skill-tag">Responsive UI</span>
+              </div>
+              <div class="skill-badge">
+                <span class="skill-dot"></span>
+                <span class="skill-name">Chart.js</span>
+                <span class="skill-tag">Data Visualization</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend & Database -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i data-lucide="database"></i>
+              </div>
+              <h3 class="category-title">Backend & Database</h3>
+            </div>
+            <div class="skills-pill-list">
+              <div class="skill-badge primary">
+                <span class="skill-dot"></span>
+                <span class="skill-name">Node.js</span>
+                <span class="skill-tag">Runtime</span>
+              </div>
+              <div class="skill-badge primary">
+                <span class="skill-dot"></span>
+                <span class="skill-name">Express.js</span>
+                <span class="skill-tag">REST APIs</span>
+              </div>
+              <div class="skill-badge primary">
+                <span class="skill-dot"></span>
+                <span class="skill-name">MongoDB</span>
+                <span class="skill-tag">NoSQL & Atlas</span>
+              </div>
+              <div class="skill-badge">
+                <span class="skill-dot"></span>
+                <span class="skill-name">Mongoose</span>
+                <span class="skill-tag">Schema Modeling</span>
+              </div>
+              <div class="skill-badge">
+                <span class="skill-dot"></span>
+                <span class="skill-name">MySQL</span>
+                <span class="skill-tag">Relational Database</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools & Version Control -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i data-lucide="wrench"></i>
+              </div>
+              <h3 class="category-title">Tools & Workflow</h3>
+            </div>
+            <div class="skills-pill-list">
+              <div class="skill-badge primary">
+                <span class="skill-dot"></span>
+                <span class="skill-name">Git</span>
+                <span class="skill-tag">Version Control</span>
+              </div>
+              <div class="skill-badge primary">
+                <span class="skill-dot"></span>
+                <span class="skill-name">GitHub</span>
+                <span class="skill-tag">Collaboration</span>
+              </div>
+              <div class="skill-badge">
+                <span class="skill-dot"></span>
+                <span class="skill-name">Postman</span>
+                <span class="skill-tag">API Testing</span>
+              </div>
+              <div class="skill-badge">
+                <span class="skill-dot"></span>
+                <span class="skill-name">Cloudinary</span>
+                <span class="skill-tag">Media Storage</span>
+              </div>
+              <div class="skill-badge">
+                <span class="skill-dot"></span>
+                <span class="skill-name">VS Code</span>
+                <span class="skill-tag">IDE</span>
+              </div>
+              <div class="skill-badge">
+                <span class="skill-dot"></span>
+                <span class="skill-name">GitHub Pages</span>
+                <span class="skill-tag">Hosting</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Core Academic & Engineering Concepts -->
+          <div class="skill-category-card full-span-card">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <i data-lucide="cpu"></i>
+              </div>
+              <h3 class="category-title">Core Computer Science Concepts</h3>
+            </div>
+            <div class="skills-pill-list flex-wrap">
+              <span class="concept-chip"><i data-lucide="check"></i> Object-Oriented Programming (OOP)</span>
+              <span class="concept-chip"><i data-lucide="check"></i> Data Structures & Algorithms (DSA)</span>
+              <span class="concept-chip"><i data-lucide="check"></i> Java Collections Framework</span>
+              <span class="concept-chip"><i data-lucide="check"></i> Exception Handling</span>
+              <span class="concept-chip"><i data-lucide="check"></i> SQL Joins & Schema Design</span>
+              <span class="concept-chip"><i data-lucide="check"></i> RESTful API Integration</span>
+              <span class="concept-chip"><i data-lucide="check"></i> Version Control Best Practices</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Practical Engineering</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-description">A collection of full-stack web applications, JavaScript projects, and responsive UI implementations.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <!-- Project Filter Buttons -->
+        <div class="filter-container">
+          <button class="filter-btn active" data-filter="all">All Projects (5)</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack & Web Apps</button>
+          <button class="filter-btn" data-filter="frontend">Frontend & Mini Projects</button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid" id="projects-grid">
+
+          <!-- Project 1: NammaKisan -->
+          <article class="project-card featured" data-category="fullstack">
+            <div class="project-card-header">
+              <div class="project-type-badge">
+                <i data-lucide="layers" class="badge-icon"></i>
+                <span>Full Stack Platform</span>
+              </div>
+              <div class="project-date">Dec 2025</div>
+            </div>
+            
+            <div class="project-body">
+              <h3 class="project-title">NammaKisan – Farmer To Consumer Platform</h3>
+              <p class="project-description">
+                A full-stack marketplace web application created to bridge the gap between farmers and consumers, enabling farmers to list agricultural produce directly, manage inventory, and conduct seamless transactions without middlemen.
+              </p>
+              
+              <ul class="project-bullets">
+                <li><i data-lucide="check-circle-2"></i> Built responsive web UI with React.js & Bootstrap for smooth catalog browsing.</li>
+                <li><i data-lucide="check-circle-2"></i> Implemented database integrations (MongoDB/MySQL) for CRUD operations and inventory data.</li>
+                <li><i data-lucide="check-circle-2"></i> Integrated Cloudinary for produce media uploads and JWT for secure authentication.</li>
+              </ul>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Cloudinary</span>
+                <span class="tech-tag">Git</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com/Soham-patil18/NammaKisan" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i data-lucide="github"></i>
+                <span>Source Code</span>
+              </a>
+              <a href="https://nammakisan-frontend1.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
+                <i data-lucide="external-link"></i>
+                <span>Live Demo</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2: BEC-BillDesk -->
+          <article class="project-card featured" data-category="fullstack">
+            <div class="project-card-header">
+              <div class="project-type-badge">
+                <i data-lucide="credit-card" class="badge-icon"></i>
+                <span>Fee Management System</span>
+              </div>
+              <div class="project-date">Mar 2025</div>
+            </div>
+            
+            <div class="project-body">
+              <h3 class="project-title">BEC-BillDesk – Online College Fee Payment System</h3>
+              <p class="project-description">
+                A web-based billing and institutional project management application developed using Next.js, React, and Java/MySQL to streamline college fee viewing, invoice tracking, and student payment records.
+              </p>
+              
+              <ul class="project-bullets">
+                <li><i data-lucide="check-circle-2"></i> Designed structured dashboards for student fee breakdown and transaction histories.</li>
+                <li><i data-lucide="check-circle-2"></i> Connected database backend to store and query student fee records with fast CRUD operations.</li>
+                <li><i data-lucide="check-circle-2"></i> Engineered responsive UI with modern JavaScript and clean component modularity.</li>
+              </ul>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">Next.js</span>
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Git</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com/Soham-patil18/BEC-BILLDESK" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i data-lucide="github"></i>
+                <span>Source Code</span>
+              </a>
+              <button class="btn btn-sm btn-subtle project-preview-trigger" data-project="bec-billdesk">
+                <i data-lucide="info"></i>
+                <span>Details</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 3: InterviewIQ-AI -->
+          <article class="project-card" data-category="fullstack">
+            <div class="project-card-header">
+              <div class="project-type-badge">
+                <i data-lucide="brain-circuit" class="badge-icon"></i>
+                <span>Interview Prep Platform</span>
+              </div>
+              <div class="project-date">Jan 2026</div>
+            </div>
+            
+            <div class="project-body">
+              <h3 class="project-title">InterviewIQ-AI – Recruitment & Prep Platform</h3>
+              <p class="project-description">
+                An interactive interview preparation platform engineered to assist job candidates and students with mock interview questions, technical assessments, and performance tracking across diverse domains.
+              </p>
+              
+              <ul class="project-bullets">
+                <li><i data-lucide="check-circle-2"></i> Built responsive assessment interface with customizable interview topic modules.</li>
+                <li><i data-lucide="check-circle-2"></i> Handled candidate score logging and question repository using MongoDB/MySQL.</li>
+                <li><i data-lucide="check-circle-2"></i> Structured backend services for interview workflow logic and evaluation state.</li>
+              </ul>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Java</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Bootstrap</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com/Soham-patil18/InterviewIQ-AI" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i data-lucide="github"></i>
+                <span>Source Code</span>
+              </a>
+              <button class="btn btn-sm btn-subtle project-preview-trigger" data-project="interviewiq">
+                <i data-lucide="info"></i>
+                <span>Details</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 4: Simon Game -->
+          <article class="project-card" data-category="frontend">
+            <div class="project-card-header">
+              <div class="project-type-badge">
+                <i data-lucide="gamepad-2" class="badge-icon"></i>
+                <span>Interactive JavaScript App</span>
+              </div>
+              <div class="project-date">Feb 2025</div>
+            </div>
+            
+            <div class="project-body">
+              <h3 class="project-title">Simon Memory Game</h3>
+              <p class="project-description">
+                An interactive browser-based memory sequencing game developed using vanilla JavaScript, HTML5, and CSS3, engineered with optimized DOM event handling for 40% faster responsiveness and audio-visual cues.
+              </p>
+              
+              <ul class="project-bullets">
+                <li><i data-lucide="check-circle-2"></i> Dynamic color pattern generator with progressive difficulty levels.</li>
+                <li><i data-lucide="check-circle-2"></i> Responsive keyboard & touch triggers with instantaneous audio/visual feedback.</li>
+                <li><i data-lucide="check-circle-2"></i> Clean modular JavaScript state management for high-score tracking.</li>
+              </ul>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Audio API</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com/Soham-patil18/SimonGame" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i data-lucide="github"></i>
+                <span>Source Code</span>
+              </a>
+              <button class="btn btn-sm btn-primary" id="open-simon-demo-btn">
+                <i data-lucide="play"></i>
+                <span>Play Mini Game</span>
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 5: Amazon & Responsive UI Clones -->
+          <article class="project-card" data-category="frontend">
+            <div class="project-card-header">
+              <div class="project-type-badge">
+                <i data-lucide="layout-grid" class="badge-icon"></i>
+                <span>Responsive UI Clones</span>
+              </div>
+              <div class="project-date">Feb 2025</div>
+            </div>
+            
+            <div class="project-body">
+              <h3 class="project-title">Amazon Clone & Responsive Web Interfaces</h3>
+              <p class="project-description">
+                High-fidelity, responsive frontend e-commerce interface inspired by Amazon, alongside practice clones (BMW, Spotify, Flipkart) developed to master CSS Flexbox, CSS Grid layouts, and multi-device responsiveness.
+              </p>
+              
+              <ul class="project-bullets">
+                <li><i data-lucide="check-circle-2"></i> Pixel-accurate product grid, navigation bars, dropdowns, and banner carousels.</li>
+                <li><i data-lucide="check-circle-2"></i> Cross-browser responsive layouts optimized for mobile, tablet, and widescreen.</li>
+                <li><i data-lucide="check-circle-2"></i> Clean semantic HTML markup and scalable CSS architecture.</li>
+              </ul>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">Flexbox & Grid</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com/Soham-patil18" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">
+                <i data-lucide="github"></i>
+                <span>GitHub Profile</span>
+              </a>
+              <button class="btn btn-sm btn-subtle project-preview-trigger" data-project="amazon-clone">
+                <i data-lucide="info"></i>
+                <span>Details</span>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS SECTION -->
+    <section class="section cert-section" id="certifications">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Verified Learning</span>
+          <h2 class="section-title">Certifications</h2>
+          <p class="section-description">Industry-recognized credentials verified through Meta and TATA Forage simulations.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="cert-grid">
+          <!-- Cert 1: Programming with JavaScript (Meta) -->
+          <div class="cert-card">
+            <div class="cert-badge-logo meta">
+              <span class="org-name">Meta</span>
+            </div>
+            <div class="cert-body">
+              <span class="cert-date"><i data-lucide="calendar"></i> July 2026</span>
+              <h3 class="cert-title">Programming with JavaScript</h3>
+              <p class="cert-org">Meta Verified Course / Specialization</p>
+              <p class="cert-summary">
+                Comprehensive training in modern JavaScript fundamentals, object-oriented JavaScript, asynchronous programming, testing, and modern ES6+ syntax.
+              </p>
+              <div class="cert-skills">
+                <span class="pill">JavaScript ES6</span>
+                <span class="pill">OOP</span>
+                <span class="pill">Async/Await</span>
+              </div>
+            </div>
+            <div class="cert-footer">
+              <button class="btn btn-sm btn-outline cert-view-btn" data-cert="meta-js">
+                <i data-lucide="eye"></i>
+                <span>View Certificate</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Cert 2: HTML and CSS in Depth (Meta) -->
+          <div class="cert-card">
+            <div class="cert-badge-logo meta">
+              <span class="org-name">Meta</span>
+            </div>
+            <div class="cert-body">
+              <span class="cert-date"><i data-lucide="calendar"></i> July 2026</span>
+              <h3 class="cert-title">HTML and CSS in Depth</h3>
+              <p class="cert-org">Meta Verified Course / Specialization</p>
+              <p class="cert-summary">
+                Advanced concepts in semantic HTML5 markup, responsive CSS architectures, Flexbox, CSS Grid layouts, animations, transitions, and UI accessibility.
+              </p>
+              <div class="cert-skills">
+                <span class="pill">HTML5 Semantics</span>
+                <span class="pill">CSS Grid & Flexbox</span>
+                <span class="pill">Responsive UI</span>
+              </div>
+            </div>
+            <div class="cert-footer">
+              <button class="btn btn-sm btn-outline cert-view-btn" data-cert="meta-html-css">
+                <i data-lucide="eye"></i>
+                <span>View Certificate</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Cert 3: GenAI Powered Data Analytics Job Simulation (TATA Forage) -->
+          <div class="cert-card">
+            <div class="cert-badge-logo tata">
+              <span class="org-name">TATA</span>
+            </div>
+            <div class="cert-body">
+              <span class="cert-date"><i data-lucide="calendar"></i> June 2026</span>
+              <h3 class="cert-title">GenAI Powered Data Analytics Job Simulation</h3>
+              <p class="cert-org">TATA & Forage</p>
+              <p class="cert-summary">
+                Practical job simulation exploring generative AI-assisted data analysis, data storytelling, enterprise insights, and business presentation.
+              </p>
+              <div class="cert-skills">
+                <span class="pill">Data Analytics</span>
+                <span class="pill">Generative AI</span>
+                <span class="pill">Business Insights</span>
+              </div>
+            </div>
+            <div class="cert-footer">
+              <button class="btn btn-sm btn-outline cert-view-btn" data-cert="tata-forage">
+                <i data-lucide="eye"></i>
+                <span>View Certificate</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & ACHIEVEMENTS SECTION -->
+    <section class="section education-section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Academic Journey</span>
+          <h2 class="section-title">Education & Achievements</h2>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="edu-achieve-wrapper">
+          <!-- Education Column -->
+          <div class="edu-column">
+            <h3 class="column-title">
+              <i data-lucide="graduation-cap"></i>
+              <span>Education</span>
+            </h3>
+
+            <div class="timeline">
+              <!-- Item 1: B.Tech -->
+              <div class="timeline-item current">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-badge">Sep 2023 – Jun 2027 (Expected)</div>
+                  <h4 class="item-title">Basaveshwar Engineering College, Bagalkot</h4>
+                  <p class="item-subtitle">Bachelor of Technology (B.Tech) – Information Science and Engineering</p>
+                  <div class="item-details">
+                    <span class="score-badge"><i data-lucide="award"></i> CGPA: 6.31</span>
+                    <span class="location-tag"><i data-lucide="map-pin"></i> Bagalkot, Karnataka</span>
+                  </div>
+                  <p class="item-desc">Core coursework: Object Oriented Programming (Java), Data Structures & Algorithms, Database Management Systems (SQL), Operating Systems, Software Engineering.</p>
+                </div>
+              </div>
+
+              <!-- Item 2: PU College -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-badge">Mar 2023</div>
+                  <h4 class="item-title">BS Composite PU College, Bedkihal</h4>
+                  <p class="item-subtitle">Grade XII (Senior Secondary) — CBSE</p>
+                  <div class="item-details">
+                    <span class="score-badge">Percentage: 59%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Item 3: School -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <div class="timeline-badge">Mar 2021</div>
+                  <h4 class="item-title">SEMS, Sadalga, Belagavi</h4>
+                  <p class="item-subtitle">Grade X (Secondary) — CBSE</p>
+                  <div class="item-details">
+                    <span class="score-badge">Percentage: 58%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Achievements Column -->
+          <div class="achieve-column">
+            <h3 class="column-title">
+              <i data-lucide="trophy"></i>
+              <span>Key Achievement</span>
+            </h3>
+
+            <div class="achievement-card">
+              <div class="achieve-icon-trophy">
+                <i data-lucide="award"></i>
+              </div>
+              <div class="achieve-content">
+                <span class="achieve-date">February 2026</span>
+                <h4 class="achieve-title">1st Prize Winner — Project Contest</h4>
+                <p class="achieve-venue">Basaveshwar Engineering College, Bagalkot</p>
+                <p class="achieve-description">
+                  Awarded First Prize in the collegiate Project Competition for architecting and presenting a robust software project solution, evaluated on practical utility, clean code architecture, and presentation.
+                </p>
+              </div>
+            </div>
+
+            <!-- Quick Recruiter Fast Facts -->
+            <div class="recruiter-facts-card">
+              <h4 class="facts-title"><i data-lucide="sparkles"></i> Recruiter Quick Summary</h4>
+              <ul class="facts-list">
+                <li><i data-lucide="check"></i> <strong>Role Target:</strong> Entry-Level / Fresher Software Developer, Java Developer, Full Stack Developer</li>
+                <li><i data-lucide="check"></i> <strong>Availability:</strong> Ready for internships & entry-level developer roles</li>
+                <li><i data-lucide="check"></i> <strong>Core Competencies:</strong> Java, Python, JavaScript, React.js, Next.js, Node.js, Express, MongoDB, MySQL, Git</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GITHUB SECTION (User requirement) -->
+    <section class="section github-section" id="github">
+      <div class="container">
+        <div class="github-box">
+          <div class="github-box-header">
+            <div class="github-brand">
+              <i data-lucide="github" class="github-large-icon"></i>
+              <div>
+                <h3 class="github-heading">GitHub Repositories & Open Activity</h3>
+                <p class="github-handle">@Soham-patil18</p>
+              </div>
+            </div>
+            <a href="https://github.com/Soham-patil18" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <i data-lucide="external-link"></i>
+              <span>Visit GitHub Profile</span>
+            </a>
+          </div>
+
+          <div class="github-repos-grid">
+            <a href="https://github.com/Soham-patil18/NammaKisan" target="_blank" rel="noopener noreferrer" class="repo-card">
+              <div class="repo-top">
+                <i data-lucide="folder-git-2" class="repo-icon"></i>
+                <span class="repo-name">NammaKisan</span>
+                <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+              </div>
+              <p class="repo-desc">Farmer-to-consumer full-stack marketplace platform.</p>
+              <div class="repo-meta">
+                <span class="lang"><span class="lang-dot react"></span>React / Node.js</span>
+                <span><i data-lucide="star"></i> Public</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/Soham-patil18/BEC-BILLDESK" target="_blank" rel="noopener noreferrer" class="repo-card">
+              <div class="repo-top">
+                <i data-lucide="folder-git-2" class="repo-icon"></i>
+                <span class="repo-name">BEC-BILLDESK</span>
+                <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+              </div>
+              <p class="repo-desc">Online college fee payment & billing management system.</p>
+              <div class="repo-meta">
+                <span class="lang"><span class="lang-dot nextjs"></span>Next.js / Java</span>
+                <span><i data-lucide="star"></i> Public</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/Soham-patil18/InterviewIQ-AI" target="_blank" rel="noopener noreferrer" class="repo-card">
+              <div class="repo-top">
+                <i data-lucide="folder-git-2" class="repo-icon"></i>
+                <span class="repo-name">InterviewIQ-AI</span>
+                <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+              </div>
+              <p class="repo-desc">Interactive AI interview preparation & assessment repository.</p>
+              <div class="repo-meta">
+                <span class="lang"><span class="lang-dot js"></span>JavaScript / Python</span>
+                <span><i data-lucide="star"></i> Public</span>
+              </div>
+            </a>
+
+            <a href="https://github.com/Soham-patil18/SimonGame" target="_blank" rel="noopener noreferrer" class="repo-card">
+              <div class="repo-top">
+                <i data-lucide="folder-git-2" class="repo-icon"></i>
+                <span class="repo-name">SimonGame</span>
+                <i data-lucide="arrow-up-right" class="arrow-icon"></i>
+              </div>
+              <p class="repo-desc">Interactive memory sequencing web game in Vanilla JS.</p>
+              <div class="repo-meta">
+                <span class="lang"><span class="lang-dot html"></span>HTML5 / JS</span>
+                <span><i data-lucide="star"></i> Public</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-subtitle">Get in Touch</span>
+          <h2 class="section-title">Contact Me</h2>
+          <p class="section-description">Have a question or interested in hiring for an entry-level software role? Feel free to reach out directly!</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-layout">
+          <!-- Left Column: Direct Info & Copy Cards -->
+          <div class="contact-info-col">
+            <h3 class="contact-info-title">Let's Connect</h3>
+            <p class="contact-info-subtitle">I'm actively seeking opportunities to build practical software and grow as a software engineer.</p>
+
+            <div class="contact-cards-list">
+              <!-- Email Card with 1-click copy -->
+              <div class="contact-quick-card">
+                <div class="c-icon-box">
+                  <i data-lucide="mail"></i>
+                </div>
+                <div class="c-text">
+                  <span class="c-label">Email</span>
+                  <a href="mailto:sohampatil49690@gmail.com" class="c-val">sohampatil49690@gmail.com</a>
+                </div>
+                <button class="btn-copy" data-copy="sohampatil49690@gmail.com" title="Copy Email" aria-label="Copy Email">
+                  <i data-lucide="copy"></i>
+                </button>
+              </div>
+
+              <!-- Phone Card with 1-click copy -->
+              <div class="contact-quick-card">
+                <div class="c-icon-box">
+                  <i data-lucide="phone"></i>
+                </div>
+                <div class="c-text">
+                  <span class="c-label">Phone</span>
+                  <a href="tel:+917899362940" class="c-val">+91 7899362940</a>
+                </div>
+                <button class="btn-copy" data-copy="+917899362940" title="Copy Phone Number" aria-label="Copy Phone Number">
+                  <i data-lucide="copy"></i>
+                </button>
+              </div>
+
+              <!-- Location Card -->
+              <div class="contact-quick-card">
+                <div class="c-icon-box">
+                  <i data-lucide="map-pin"></i>
+                </div>
+                <div class="c-text">
+                  <span class="c-label">Location</span>
+                  <span class="c-val">Bagalkot, Karnataka, India</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media Hub -->
+            <div class="contact-socials-box">
+              <span class="c-socials-heading">Professional Profiles:</span>
+              <div class="social-btn-group">
+                <a href="https://github.com/Soham-patil18" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i data-lucide="github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://linkedin.com/in/soham-patil-108s/" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+                  <i data-lucide="linkedin"></i>
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form -->
+          <div class="contact-form-col">
+            <div class="contact-form-card">
+              <h3 class="form-title">Send a Direct Message</h3>
+              <form id="contact-form" novalidate>
+                <div class="form-group">
+                  <label for="contact-name">Your Name <span class="req">*</span></label>
+                  <input type="text" id="contact-name" name="name" placeholder="e.g. Alex Johnson" required>
+                  <span class="form-error" id="name-error">Please enter your name</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email">Your Email <span class="req">*</span></label>
+                  <input type="email" id="contact-email" name="email" placeholder="e.g. alex@example.com" required>
+                  <span class="form-error" id="email-error">Please enter a valid email address</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-subject">Subject</label>
+                  <input type="text" id="contact-subject" name="subject" placeholder="e.g. Software Developer Opportunity / Project Inquiry">
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-message">Message <span class="req">*</span></label>
+                  <textarea id="contact-message" name="message" rows="5" placeholder="Hi Soham, I came across your portfolio and would like to discuss..." required></textarea>
+                  <span class="form-error" id="message-error">Please enter a message</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-full" id="contact-submit-btn">
+                  <i data-lucide="send"></i>
+                  <span>Send Message</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <a href="#home" class="footer-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span>Soham Patil</span>
+          <span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-tagline">Aspiring Java Developer & Full Stack Developer • B.Tech ISE (2027)</p>
+      </div>
+
+      <div class="footer-center">
+        <ul class="footer-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-right">
+        <div class="footer-socials">
+          <a href="https://github.com/Soham-patil18" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i data-lucide="github"></i></a>
+          <a href="https://linkedin.com/in/soham-patil-108s/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          <a href="mailto:sohampatil49690@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+        </div>
+        <p class="copyright">© 2026 Soham Patil. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING BACK TO TOP BUTTON -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+    <i data-lucide="chevron-up"></i>
+  </button>
+
+  <!-- RESUME MODAL & PRINT VIEW -->
+  <div class="modal" id="resume-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog modal-lg">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i data-lucide="file-text" class="modal-icon"></i>
+          <div>
+            <h3 class="modal-title">Soham Patil — Resume Preview</h3>
+            <p class="modal-subtitle">B.Tech Information Science & Engineering • Aspiring Java & Full Stack Developer</p>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-sm btn-primary" id="modal-download-resume">
+            <i data-lucide="printer"></i>
+            <span>Print / Save PDF</span>
+          </button>
+          <button class="modal-close btn-icon" id="resume-modal-close" aria-label="Close resume modal">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+      </div>
+      <div class="modal-body resume-modal-body">
+        <div class="resume-document" id="printable-resume">
+          <!-- Resume Header -->
+          <div class="res-header">
+            <h1 class="res-name">SOHAM PATIL</h1>
+            <div class="res-contact-bar">
+              <span>Bagalkot, Karnataka, India</span>
+              <span>•</span>
+              <span>+91 7899362940</span>
+              <span>•</span>
+              <span>sohampatil49690@gmail.com</span>
+            </div>
+            <div class="res-links-bar">
+              <span>GitHub: <a href="https://github.com/Soham-patil18" target="_blank">github.com/Soham-patil18</a></span>
+              <span>•</span>
+              <span>LinkedIn: <a href="https://linkedin.com/in/soham-patil-108s/" target="_blank">linkedin.com/in/soham-patil-108s/</a></span>
+            </div>
+          </div>
+
+          <!-- Summary -->
+          <div class="res-section">
+            <h2 class="res-heading">SUMMARY</h2>
+            <p class="res-text">
+              Aspiring Software Developer with a strong foundation in Java, HTML, CSS, and basic JavaScript. Passionate about learning programming and developing simple, user-friendly web applications. Quick to learn new technologies and improve technical skills through hands-on projects and practice. Seeking an entry-level Software Developer role to apply my knowledge, contribute to real-world projects, and grow as a professional.
+            </p>
+          </div>
+
+          <!-- Technical Skills -->
+          <div class="res-section">
+            <h2 class="res-heading">TECHNICAL SKILLS</h2>
+            <div class="res-skills-table">
+              <div class="res-skill-row"><strong>Languages:</strong> Python, C, Java, SQL</div>
+              <div class="res-skill-row"><strong>Frontend:</strong> HTML5, CSS3, Bootstrap, Chart.js, React.js, Next.js</div>
+              <div class="res-skill-row"><strong>Database:</strong> MongoDB, Mongoose, MongoDB Atlas, MySQL</div>
+              <div class="res-skill-row"><strong>Tools:</strong> Git, GitHub, Postman, Hoppscotch, GitHub Pages, Cloudinary, VS Code</div>
+              <div class="res-skill-row"><strong>Concepts:</strong> DSA, OOP, Java Collections, Exception Handling, SQL Joins, REST APIs</div>
+            </div>
+          </div>
+
+          <!-- Projects -->
+          <div class="res-section">
+            <h2 class="res-heading">PROJECTS</h2>
+            <div class="res-item">
+              <div class="res-item-head">
+                <span class="res-item-title">NammaKisan — Farmer-to-Consumer Platform</span>
+                <span class="res-item-date">Dec 2025</span>
+              </div>
+              <div class="res-item-sub">Python, React.js, Node.js, HTML5, CSS3, Bootstrap, MySQL, Git, GitHub</div>
+              <ul class="res-bullets">
+                <li>Built a web-based application providing a responsive and user-friendly marketplace interface.</li>
+                <li>Implemented database integration to manage application data and perform CRUD operations efficiently.</li>
+                <li>Used Git and GitHub for version control and project development, maintaining structured code.</li>
+              </ul>
+            </div>
+
+            <div class="res-item">
+              <div class="res-item-head">
+                <span class="res-item-title">InterviewIQ AI — AI-Powered Interview Preparation Platform</span>
+                <span class="res-item-date">Jan 2026</span>
+              </div>
+              <div class="res-item-sub">Python, Java, HTML5, CSS3, Bootstrap, MongoDB, MySQL, Git, GitHub</div>
+              <ul class="res-bullets">
+                <li>Developed an interview preparation platform providing a responsive interface for interview practice.</li>
+                <li>Implemented MongoDB and MySQL for storing assessment results, user data, and question sets.</li>
+              </ul>
+            </div>
+
+            <div class="res-item">
+              <div class="res-item-head">
+                <span class="res-item-title">BEC Bill Desk — Online College Fee Payment System</span>
+                <span class="res-item-date">Mar 2025</span>
+              </div>
+              <div class="res-item-sub">Java, Next.js, React, HTML5, CSS3, Bootstrap, MySQL, Git, GitHub</div>
+              <ul class="res-bullets">
+                <li>Developed an online fee payment system allowing students to view fee details and manage payments online.</li>
+                <li>Implemented MySQL database to manage student, fee, and payment-related records with efficient CRUD operations.</li>
+              </ul>
+            </div>
+
+            <div class="res-item">
+              <div class="res-item-head">
+                <span class="res-item-title">Mini Projects & UI Clones</span>
+                <span class="res-item-date">Feb 2025</span>
+              </div>
+              <ul class="res-bullets">
+                <li><strong>Simon's Game:</strong> JavaScript memory game with improved event handling for 40% faster responsiveness.</li>
+                <li><strong>HTML/CSS UI Clones:</strong> Responsive Amazon, BMW, Spotify, and Flipkart UI clones built with Flexbox and Grid.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Education -->
+          <div class="res-section">
+            <h2 class="res-heading">EDUCATION</h2>
+            <div class="res-item">
+              <div class="res-item-head">
+                <span class="res-item-title">Basaveshwar Engineering College, Bagalkot</span>
+                <span class="res-item-date">Sep 2023 – Jun 2027</span>
+              </div>
+              <div class="res-item-sub">B.Tech in Information Science and Engineering — CGPA: 6.31</div>
+            </div>
+            <div class="res-item">
+              <div class="res-item-head">
+                <span class="res-item-title">BS Composite PU College, Bedkihal</span>
+                <span class="res-item-date">Mar 2023</span>
+              </div>
+              <div class="res-item-sub">Grade XII, CBSE — 59%</div>
+            </div>
+            <div class="res-item">
+              <div class="res-item-head">
+                <span class="res-item-title">SEMS, Sadalga, Belagavi</span>
+                <span class="res-item-date">Mar 2021</span>
+              </div>
+              <div class="res-item-sub">Grade X, CBSE — 58%</div>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div class="res-section">
+            <h2 class="res-heading">CERTIFICATIONS</h2>
+            <ul class="res-bullets">
+              <li><strong>Programming with JavaScript</strong> — Meta (July 2026)</li>
+              <li><strong>HTML and CSS in Depth</strong> — Meta (July 2026)</li>
+              <li><strong>GenAI Powered Data Analytics Job Simulation</strong> — TATA, Forage (June 2026)</li>
+            </ul>
+          </div>
+
+          <!-- Achievements -->
+          <div class="res-section">
+            <h2 class="res-heading">ACHIEVEMENTS</h2>
+            <ul class="res-bullets">
+              <li><strong>1st Prize, Project Contest</strong> — Basaveshwar Engineering College (Feb 2026)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CERTIFICATE PREVIEW MODAL -->
+  <div class="modal" id="cert-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i data-lucide="award" class="modal-icon"></i>
+          <div>
+            <h3 class="modal-title" id="cert-modal-title">Certificate Details</h3>
+            <p class="modal-subtitle" id="cert-modal-org">Issuing Organization</p>
+          </div>
+        </div>
+        <button class="modal-close btn-icon" id="cert-modal-close" aria-label="Close certificate modal">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="modal-body cert-modal-body" id="cert-modal-content">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- PLAYABLE SIMON MINI-GAME MODAL -->
+  <div class="modal" id="simon-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i data-lucide="gamepad-2" class="modal-icon"></i>
+          <div>
+            <h3 class="modal-title">Simon Memory Game — Live Interactive Demo</h3>
+            <p class="modal-subtitle">Built with Pure JavaScript DOM Event Handling</p>
+          </div>
+        </div>
+        <button class="modal-close btn-icon" id="simon-modal-close" aria-label="Close Simon Game modal">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="modal-body simon-game-body">
+        <div class="simon-game-wrapper">
+          <div class="simon-status">
+            <h4 id="simon-level-title">Press Start to Play</h4>
+            <div class="simon-score">Current Score: <span id="simon-score-val">0</span> | Best: <span id="simon-best-val">0</span></div>
+          </div>
+          <div class="simon-board">
+            <div class="simon-btn green" id="green" data-color="green"></div>
+            <div class="simon-btn red" id="red" data-color="red"></div>
+            <div class="simon-btn yellow" id="yellow" data-color="yellow"></div>
+            <div class="simon-btn blue" id="blue" data-color="blue"></div>
+          </div>
+          <div class="simon-controls">
+            <button class="btn btn-primary" id="simon-start-btn">Start Game</button>
+            <button class="btn btn-subtle" id="simon-reset-btn">Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <i data-lucide="check-circle" class="toast-icon" id="toast-icon"></i>
+    <span class="toast-message" id="toast-message">Copied to clipboard!</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
