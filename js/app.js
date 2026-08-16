@@ -1,6 +1,6 @@
 /**
  * Soham Patil Portfolio — Main Application Script
- * Handles Theme Toggling, Modals, Scroll Spy, Filtering, Audio Synthesizer, and Form Handling
+ * Interactive Constellation Canvas, Scroll-Spy Navigation, Modals, Audio Synthesizer & Toast Alerts
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,23 +10,78 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     1. Theme Switcher (Dark / Light Mode)
+     1. Interactive Constellation Particle Canvas (Exact Friend's Feature)
      -------------------------------------------------------------------------- */
-  const themeToggleBtn = document.getElementById('theme-toggle');
-  const htmlElement = document.documentElement;
+  const canvas = document.getElementById('particle-canvas');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let animationFrameId;
+    let particles = [];
 
-  // Check saved theme or default to dark
-  const savedTheme = localStorage.getItem('theme') || 'dark';
-  htmlElement.setAttribute('data-theme', savedTheme);
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      initParticles();
+    };
 
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', () => {
-      const currentTheme = htmlElement.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      htmlElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      showToast(`Switched to ${newTheme} mode`);
-    });
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.vx = (Math.random() - 0.5) * 0.6;
+        this.vy = (Math.random() - 0.5) * 0.6;
+        this.size = Math.random() * 2 + 0.6;
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
+        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
+      }
+      draw() {
+        ctx.fillStyle = 'rgba(41, 121, 255, 0.6)';
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    const initParticles = () => {
+      particles = [];
+      const count = Math.min(100, Math.max(40, Math.floor((canvas.width * canvas.height) / 14000)));
+      for (let i = 0; i < count; i++) {
+        particles.push(new Particle());
+      }
+    };
+
+    const animateParticles = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      const len = particles.length;
+      for (let i = 0; i < len; i++) {
+        for (let j = i; j < len; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 110) {
+            ctx.beginPath();
+            ctx.strokeStyle = `rgba(41, 121, 255, ${0.18 - dist / 800})`;
+            ctx.lineWidth = 0.6;
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.stroke();
+          }
+        }
+      }
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      animationFrameId = requestAnimationFrame(animateParticles);
+    };
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+    animateParticles();
   }
 
   /* --------------------------------------------------------------------------
@@ -40,16 +95,16 @@ document.addEventListener('DOMContentLoaded', () => {
   function handleScroll() {
     const scrollY = window.scrollY;
 
-    // Navbar shadow on scroll
+    // Navbar scrolled background
     if (navbar) {
-      if (scrollY > 20) {
+      if (scrollY > 30) {
         navbar.classList.add('scrolled');
       } else {
         navbar.classList.remove('scrolled');
       }
     }
 
-    // Back to Top button visibility
+    // Back to top visibility
     if (backToTopBtn) {
       if (scrollY > 400) {
         backToTopBtn.classList.add('visible');
@@ -58,10 +113,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Scroll Spy for active navigation highlight
+    // Section scroll-spy
     sections.forEach(section => {
       const sectionHeight = section.offsetHeight;
-      const sectionTop = section.offsetTop - 120;
+      const sectionTop = section.offsetTop - 140;
       const sectionId = section.getAttribute('id');
 
       if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
@@ -119,39 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     4. Project Filtering
-     -------------------------------------------------------------------------- */
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
-
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      const filterValue = btn.getAttribute('data-filter');
-
-      projectCards.forEach(card => {
-        const cardCategory = card.getAttribute('data-category');
-        if (filterValue === 'all' || cardCategory === filterValue) {
-          card.style.display = 'flex';
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }, 50);
-        } else {
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(10px)';
-          setTimeout(() => {
-            card.style.display = 'none';
-          }, 200);
-        }
-      });
-    });
-  });
-
-  /* --------------------------------------------------------------------------
-     5. Modals Management (Resume, Certificate, Simon Game, Project Details)
+     4. Modals Management (Resume, Certificate, Simon Game)
      -------------------------------------------------------------------------- */
   const resumeModal = document.getElementById('resume-modal');
   const certModal = document.getElementById('cert-modal');
@@ -178,7 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   }
 
-  // Resume Modal Triggers
   resumeTriggers.forEach(btn => {
     if (btn) {
       btn.addEventListener('click', (e) => {
@@ -220,51 +242,33 @@ document.addEventListener('DOMContentLoaded', () => {
         certModalOrg.textContent = `${certData.issuer} • ${certData.platform}`;
 
         certModalContent.innerHTML = `
-          <div class="cert-preview-wrapper">
-            <div class="cert-visual-card">
-              <span class="cert-gold-ribbon">VERIFIED CREDENTIAL</span>
-              <div class="cert-visual-badge">
-                <i data-lucide="award"></i>
-              </div>
-              <p class="cert-certifies">This is to certify that</p>
-              <h4 class="cert-recipient">Soham Patil</h4>
-              <p class="cert-certifies">has successfully completed the coursework for</p>
-              <h3 class="cert-course">${certData.title}</h3>
-              <p class="cert-issuer">Issued by <strong>${certData.issuer}</strong> via ${certData.platform}</p>
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <div style="background: rgba(23, 42, 69, 0.7); border: 1px solid rgba(41, 121, 255, 0.3); border-radius: 12px; padding: 24px; text-align: center;">
+              <span style="display: inline-block; font-size: 0.75rem; font-weight: 700; color: #00BCD4; background: rgba(0, 188, 212, 0.15); padding: 4px 12px; border-radius: 9999px; margin-bottom: 12px;">VERIFIED CREDENTIAL</span>
+              <p style="font-size: 0.85rem; color: #94a3b8; text-transform: uppercase;">This is to certify that</p>
+              <h3 style="font-size: 1.4rem; font-weight: 800; color: #ffffff; margin: 4px 0 10px;">Soham Patil</h3>
+              <p style="font-size: 0.85rem; color: #94a3b8;">has completed the course requirement for</p>
+              <h4 style="font-size: 1.2rem; color: #2979FF; margin: 4px 0 8px;">${certData.title}</h4>
+              <p style="font-size: 0.9rem; color: #94a3b8;">Issued by <strong>${certData.issuer}</strong> via ${certData.platform}</p>
             </div>
 
-            <div class="cert-details-grid">
-              <div class="detail-box">
-                <strong>Issuing Organization</strong>
-                <span>${certData.issuer}</span>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              <div style="background: rgba(23, 42, 69, 0.5); padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(41, 121, 255, 0.15);">
+                <strong style="display: block; font-size: 0.75rem; color: #64748b; text-transform: uppercase;">Completion Date</strong>
+                <span style="color: #ffffff; font-weight: 600;">${certData.date}</span>
               </div>
-              <div class="detail-box">
-                <strong>Completion Date</strong>
-                <span>${certData.date}</span>
-              </div>
-              <div class="detail-box">
-                <strong>Credential ID</strong>
-                <span>${certData.credentialId}</span>
-              </div>
-              <div class="detail-box">
-                <strong>Status</strong>
-                <span style="color: var(--accent-success);">Verified / Authentic</span>
+              <div style="background: rgba(23, 42, 69, 0.5); padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(41, 121, 255, 0.15);">
+                <strong style="display: block; font-size: 0.75rem; color: #64748b; text-transform: uppercase;">Credential ID</strong>
+                <span style="color: #00BCD4; font-weight: 600;">${certData.credentialId}</span>
               </div>
             </div>
 
-            <div class="cert-skills-summary">
-              <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 10px;">${certData.summary}</p>
-              <div class="skills-pill-list">
-                ${certData.skills.map(skill => `<span class="concept-chip"><i data-lucide="check"></i> ${skill}</span>`).join('')}
-              </div>
-            </div>
+            <p style="font-size: 0.92rem; color: #94a3b8; line-height: 1.6;">${certData.summary}</p>
 
-            <div style="display: flex; gap: 12px; margin-top: 10px;">
-              <a href="${certData.verificationUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary w-full">
-                <i data-lucide="external-link"></i>
-                <span>View on Profile</span>
-              </a>
-            </div>
+            <a href="${certData.verificationUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full">
+              <i data-lucide="external-link"></i>
+              <span>View Profile Credentials</span>
+            </a>
           </div>
         `;
 
@@ -277,63 +281,18 @@ document.addEventListener('DOMContentLoaded', () => {
     certModalClose.addEventListener('click', () => closeModal(certModal));
   }
 
-  // Project Details Triggers
-  const projectDetailTriggers = document.querySelectorAll('.project-preview-trigger');
-  projectDetailTriggers.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const projKey = btn.getAttribute('data-project');
-      const projData = PORTFOLIO_DATA.projects[projKey];
-      if (projData && certModalContent) {
-        certModalTitle.textContent = projData.title;
-        certModalOrg.textContent = `Project Overview • ${projData.date}`;
-
-        certModalContent.innerHTML = `
-          <div class="cert-preview-wrapper">
-            <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6;">${projData.description}</p>
-            
-            <div>
-              <h5 style="font-size: 0.95rem; margin-bottom: 8px; color: var(--accent-primary);">Key Architectural Highlights:</h5>
-              <ul class="project-bullets">
-                ${projData.highlights.map(h => `<li><i data-lucide="check-circle-2"></i> ${h}</li>`).join('')}
-              </ul>
-            </div>
-
-            <div>
-              <h5 style="font-size: 0.95rem; margin-bottom: 8px; color: var(--accent-primary);">Tech Stack & Tools:</h5>
-              <div class="project-tech-stack">
-                ${projData.stack.map(t => `<span class="tech-tag">${t}</span>`).join('')}
-              </div>
-            </div>
-
-            <div style="display: flex; gap: 12px; margin-top: 10px;">
-              <a href="${projData.github}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline w-full">
-                <i data-lucide="github"></i>
-                <span>GitHub Repository</span>
-              </a>
-              ${projData.live ? `<a href="${projData.live}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary w-full"><i data-lucide="external-link"></i><span>Live Demo</span></a>` : ''}
-            </div>
-          </div>
-        `;
-        openModal(certModal);
-      }
-    });
-  });
-
-  // Playable Simon Game Modal
+  // Simon Game Modal
   const openSimonBtn = document.getElementById('open-simon-demo-btn');
   const simonModalClose = document.getElementById('simon-modal-close');
 
   if (openSimonBtn) {
-    openSimonBtn.addEventListener('click', () => {
-      openModal(simonModal);
-    });
+    openSimonBtn.addEventListener('click', () => openModal(simonModal));
   }
-
   if (simonModalClose) {
     simonModalClose.addEventListener('click', () => closeModal(simonModal));
   }
 
-  // Close modals on background click or ESC
+  // Close modals on background or ESC
   document.querySelectorAll('.modal').forEach(modal => {
     const backdrop = modal.querySelector('.modal-backdrop');
     if (backdrop) {
@@ -353,7 +312,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* --------------------------------------------------------------------------
-     6. Simon Game Engine (Web Audio API Synthesizer)
+     5. Simon Game Engine (Web Audio API Synthesizer)
      -------------------------------------------------------------------------- */
   const buttonColors = ["green", "red", "yellow", "blue"];
   let gamePattern = [];
@@ -368,7 +327,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const startBtn = document.getElementById('simon-start-btn');
   const resetBtn = document.getElementById('simon-reset-btn');
 
-  // Web Audio Synthesizer (No external audio file dependencies!)
   const audioCtx = window.AudioContext ? new (window.AudioContext || window.webkitAudioContext)() : null;
 
   function playTone(color) {
@@ -377,11 +335,11 @@ document.addEventListener('DOMContentLoaded', () => {
       audioCtx.resume();
     }
     const freqMap = {
-      green: 261.63, // C4
-      red: 329.63,   // E4
-      yellow: 392.00,// G4
-      blue: 523.25,  // C5
-      wrong: 110.00  // Low buzz
+      green: 261.63,
+      red: 329.63,
+      yellow: 392.00,
+      blue: 523.25,
+      wrong: 110.00
     };
 
     const osc = audioCtx.createOscillator();
@@ -482,14 +440,14 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     7. 1-Click Copy-to-Clipboard & Toast Alerts
+     6. 1-Click Copy-to-Clipboard & Toast Alerts
      -------------------------------------------------------------------------- */
   const copyButtons = document.querySelectorAll('.btn-copy');
   const toast = document.getElementById('toast');
   const toastMessage = document.getElementById('toast-message');
   let toastTimeout = null;
 
-  function showToast(message, isError = false) {
+  function showToast(message) {
     if (!toast || !toastMessage) return;
     toastMessage.textContent = message;
     toast.classList.add('show');
@@ -526,13 +484,13 @@ document.addEventListener('DOMContentLoaded', () => {
       document.execCommand('copy');
       showToast(`Copied "${text}" to clipboard!`);
     } catch (err) {
-      showToast('Could not copy text.', true);
+      showToast('Could not copy text.');
     }
     document.body.removeChild(textArea);
   }
 
   /* --------------------------------------------------------------------------
-     8. Contact Form Handling
+     7. Contact Form Handling
      -------------------------------------------------------------------------- */
   const contactForm = document.getElementById('contact-form');
   const nameInput = document.getElementById('contact-name');
@@ -546,7 +504,6 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       let isValid = true;
 
-      // Validate Name
       if (!nameInput.value.trim()) {
         nameInput.parentElement.classList.add('has-error');
         isValid = false;
@@ -554,7 +511,6 @@ document.addEventListener('DOMContentLoaded', () => {
         nameInput.parentElement.classList.remove('has-error');
       }
 
-      // Validate Email
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailInput.value.trim() || !emailPattern.test(emailInput.value.trim())) {
         emailInput.parentElement.classList.add('has-error');
@@ -563,7 +519,6 @@ document.addEventListener('DOMContentLoaded', () => {
         emailInput.parentElement.classList.remove('has-error');
       }
 
-      // Validate Message
       if (!messageInput.value.trim()) {
         messageInput.parentElement.classList.add('has-error');
         isValid = false;
@@ -572,23 +527,20 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       if (!isValid) {
-        showToast('Please fill in all required fields correctly.', true);
+        showToast('Please fill in all required fields.');
         return;
       }
 
-      // Simulate submission & open direct email draft fallback
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i data-lucide="loader" class="spin"></i> Sending message...';
+        submitBtn.innerHTML = '<i data-lucide="loader"></i> Sending message...';
         if (window.lucide) lucide.createIcons();
       }
 
       setTimeout(() => {
         showToast('Message sent! Opening email client...');
-        
-        const mailSubject = encodeURIComponent(subjectInput.value.trim() || `Portfolio Contact from ${nameInput.value.trim()}`);
+        const mailSubject = encodeURIComponent(subjectInput.value.trim() || `Portfolio Inquiry from ${nameInput.value.trim()}`);
         const mailBody = encodeURIComponent(`Hi Soham,\n\n${messageInput.value.trim()}\n\nFrom: ${nameInput.value.trim()} (${emailInput.value.trim()})`);
-        
         window.location.href = `mailto:sohampatil49690@gmail.com?subject=${mailSubject}&body=${mailBody}`;
 
         contactForm.reset();
@@ -604,7 +556,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 600);
     });
 
-    // Realtime error clearing
     [nameInput, emailInput, messageInput].forEach(input => {
       if (input) {
         input.addEventListener('input', () => {

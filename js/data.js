@@ -14,8 +14,7 @@ const PORTFOLIO_DATA = {
     phone: "+91 7899362940",
     location: "Bagalkot, Karnataka, India",
     github: "https://github.com/Soham-patil18",
-    linkedin: "https://linkedin.com/in/soham-patil-108s/",
-    portfolio: "https://portfolio-nine-lyart-56.vercel.app/"
+    linkedin: "https://linkedin.com/in/soham-patil-108s/"
   },
 
   certifications: {
