@@ -636,8 +636,8 @@
             </div>
           </div>
 
-          <!-- Project 5: Amazon UI Clone -->
-          <div class="project-showcase-card">
+          <!-- Project 5: Amazon UI Clone (With 2-Second Animated Carousel) -->
+          <div class="project-showcase-card featured-project-card">
             <div class="p-card-top">
               <div class="p-type-tag">
                 <i data-lucide="shopping-cart"></i>
@@ -645,13 +645,54 @@
               </div>
               <span class="p-date">Feb 2025</span>
             </div>
+            
             <h3 class="p-title">Amazon UI Clone — Responsive E-Commerce Interface</h3>
+
+            <!-- 2-Second Continuous Animated Image Carousel for Amazon Clone -->
+            <div class="project-carousel-wrapper" id="amazonclone-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide active" data-index="0">
+                  <img src="assets/projects/amazonclone/amazon-clone-hero-banner.png" alt="Amazon Clone Header and Hero Banner" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="shopping-bag"></i> Amazon Homepage & Hero Promotion Banner</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="1">
+                  <img src="assets/projects/amazonclone/amazon-clone-products-grid.png" alt="Amazon Clone Multi-Category Product Grid" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="grid"></i> Responsive Products & Deals Category Grid</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="2">
+                  <img src="assets/projects/amazonclone/amazon-clone-footer-layout.png" alt="Amazon Clone Responsive Multi-Tier Footer" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="layout"></i> Multi-Column Responsive Site Footer</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel Controls -->
+              <button class="carousel-btn prev-btn" id="amz-prev-btn" aria-label="Previous Slide">
+                <i data-lucide="chevron-left"></i>
+              </button>
+              <button class="carousel-btn next-btn" id="amz-next-btn" aria-label="Next Slide">
+                <i data-lucide="chevron-right"></i>
+              </button>
+
+              <!-- Carousel Indicators -->
+              <div class="carousel-dots" id="amz-dots">
+                <button class="dot-btn active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="dot-btn" data-slide="1" aria-label="Slide 2"></button>
+                <button class="dot-btn" data-slide="2" aria-label="Slide 3"></button>
+              </div>
+            </div>
+
             <p class="p-desc">
-              Pixel-accurate frontend clone of Amazon's web application engineered with modern HTML5 and responsive CSS Grid/Flexbox layouts.
+              Pixel-accurate frontend clone of Amazon's web application engineered with modern HTML5 and responsive CSS Grid/Flexbox layouts, replicating the structure, layout, and visual design of the Amazon India website.
             </p>
             <ul class="p-highlights">
-              <li><i data-lucide="check-circle-2"></i> Implemented multi-tier navigation bar with location picker, search bar, and language dropdowns.</li>
-              <li><i data-lucide="check-circle-2"></i> Crafted responsive product card grids, hero promotion carousels, and footer site map.</li>
+              <li><i data-lucide="check-circle-2"></i> Implemented multi-tier navigation bar with location picker, search bar, language dropdowns, and cart count.</li>
+              <li><i data-lucide="check-circle-2"></i> Crafted responsive product card grids, hero promotion carousels, and multi-column footer site map.</li>
             </ul>
             <div class="p-tech-row">
               <span>HTML5</span>
