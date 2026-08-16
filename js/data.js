@@ -47,7 +47,7 @@ const PORTFOLIO_DATA = {
       date: "June 25, 2026",
       credentialId: "Q57uMJM5s9pbmKHXr",
       userCode: "6a3cec1ea27deb0c56362ddf",
-      verificationUrl: "https://www.theforage.com/",
+      verificationUrl: "assets/certificates/tata-forage-genai-certificate.png",
       image: "assets/certificates/tata-forage-genai-certificate.png",
       skills: ["Exploratory Data Analysis", "Risk Profiling", "Predicting Delinquency with AI", "Data Storytelling & Strategy", "AI-Driven Business Insights"],
       summary: "Issued by Forage in collaboration with TATA. Completed practical tasks in exploratory data analysis and risk profiling, predicting delinquency with AI, and crafting executive-level business reports and data storytelling for collections strategies."
