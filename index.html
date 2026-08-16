@@ -452,8 +452,8 @@
             </div>
           </div>
 
-          <!-- Project 3: InterviewIQ-AI -->
-          <div class="project-showcase-card">
+          <!-- Project 3: InterviewIQ-AI (With 2-Second Animated Carousel) -->
+          <div class="project-showcase-card featured-project-card">
             <div class="p-card-top">
               <div class="p-type-tag">
                 <i data-lucide="brain-circuit"></i>
@@ -461,22 +461,78 @@
               </div>
               <span class="p-date">Jan 2026</span>
             </div>
+            
             <h3 class="p-title">InterviewIQ AI — AI-Powered Interview Preparation Platform</h3>
+
+            <!-- 2-Second Continuous Animated Image Carousel for InterviewIQ -->
+            <div class="project-carousel-wrapper" id="interviewiq-carousel">
+              <div class="carousel-track">
+                <div class="carousel-slide active" data-index="0">
+                  <img src="assets/projects/interviewiq/interviewiq-hero-landing.png" alt="InterviewIQ AI Hero Portal" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="sparkles"></i> AI-Powered Mock Interview Platform</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="1">
+                  <img src="assets/projects/interviewiq/interviewiq-features-overview.png" alt="InterviewIQ Platform Modules & Live Workspace" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="cpu"></i> Realistic Personas & Coding Workspace</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="2">
+                  <img src="assets/projects/interviewiq/interviewiq-how-it-works.png" alt="InterviewIQ 5-Step Automated Workflow" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="workflow"></i> Resume Intelligence & 5-Step Workflow</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="3">
+                  <img src="assets/projects/interviewiq/interviewiq-comparison-table.png" alt="InterviewIQ AI Structural Feedback & Reports" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="bar-chart-2"></i> Granular AI Scorecard & Analytics</span>
+                  </div>
+                </div>
+                <div class="carousel-slide" data-index="4">
+                  <img src="assets/projects/interviewiq/interviewiq-cta-screen.png" alt="InterviewIQ Assessment Dashboard" class="carousel-img">
+                  <div class="slide-caption">
+                    <span class="slide-badge"><i data-lucide="check-circle-2"></i> Real-Time Feedback & Progress Tracking</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Carousel Controls -->
+              <button class="carousel-btn prev-btn" id="iiq-prev-btn" aria-label="Previous Slide">
+                <i data-lucide="chevron-left"></i>
+              </button>
+              <button class="carousel-btn next-btn" id="iiq-next-btn" aria-label="Next Slide">
+                <i data-lucide="chevron-right"></i>
+              </button>
+
+              <!-- Carousel Indicators -->
+              <div class="carousel-dots" id="iiq-dots">
+                <button class="dot-btn active" data-slide="0" aria-label="Slide 1"></button>
+                <button class="dot-btn" data-slide="1" aria-label="Slide 2"></button>
+                <button class="dot-btn" data-slide="2" aria-label="Slide 3"></button>
+                <button class="dot-btn" data-slide="3" aria-label="Slide 4"></button>
+                <button class="dot-btn" data-slide="4" aria-label="Slide 5"></button>
+              </div>
+            </div>
+
             <p class="p-desc">
-              Developed an interview preparation platform using Python, Java, HTML5, CSS3, and Bootstrap, providing a responsive and user-friendly interface for interview practice and candidate assessments.
+              Developed an AI-powered technical interview preparation platform designed to help software engineering candidates practice domain-specific technical questions, evaluate mock assessments, and monitor preparation metrics.
             </p>
             <ul class="p-highlights">
-              <li><i data-lucide="check-circle-2"></i> Implemented MongoDB and MySQL for storing and managing interview-related data, user information, and assessment results.</li>
-              <li><i data-lucide="check-circle-2"></i> Clean modular architecture with Git version control.</li>
+              <li><i data-lucide="check-circle-2"></i> Integrated AI personas, resume parsing intelligence, and Monaco live coding editor.</li>
+              <li><i data-lucide="check-circle-2"></i> Implemented MongoDB and MySQL for storing assessment results, user data, and structured question banks.</li>
+              <li><i data-lucide="check-circle-2"></i> Clean modular architecture with Git version control and responsive design.</li>
             </ul>
             <div class="p-tech-row">
-              <span>Java</span>
+              <span>Next.js</span>
+              <span>React</span>
               <span>Python</span>
-              <span>HTML5</span>
-              <span>CSS3</span>
-              <span>Bootstrap</span>
+              <span>Java</span>
               <span>MongoDB</span>
               <span>MySQL</span>
+              <span>Git</span>
             </div>
             <div class="p-actions">
               <a href="https://github.com/Soham-patil18/InterviewIQ-AI" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">

@@ -1,6 +1,6 @@
 /**
  * Soham Patil Portfolio — Main Application Script
- * Interactive Constellation Canvas, 2-Second Continuous Project Carousel, High-Res Certificate Previews, Modals & Audio Synthesizer
+ * Interactive Constellation Canvas, 2-Second Continuous Project Carousels, High-Res Certificate Previews, Modals & Audio Synthesizer
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -85,23 +85,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     2. NammaKisan 2-Second Continuous Animated Carousel
+     2. Reusable 2-Second Continuous Animated Project Carousels
      -------------------------------------------------------------------------- */
-  const carouselWrapper = document.getElementById('nammakisan-carousel');
-  if (carouselWrapper) {
-    const slides = carouselWrapper.querySelectorAll('.carousel-slide');
-    const dots = carouselWrapper.querySelectorAll('.dot-btn');
-    const prevBtn = document.getElementById('nk-prev-btn');
-    const nextBtn = document.getElementById('nk-next-btn');
+  function setupProjectCarousel(wrapperId, prevBtnId, nextBtnId) {
+    const wrapper = document.getElementById(wrapperId);
+    if (!wrapper) return;
+
+    const slides = wrapper.querySelectorAll('.carousel-slide');
+    const dots = wrapper.querySelectorAll('.dot-btn');
+    const prevBtn = document.getElementById(prevBtnId);
+    const nextBtn = document.getElementById(nextBtnId);
     let currentSlide = 0;
     let autoplayInterval = null;
 
     function goToSlide(index) {
+      if (slides.length === 0) return;
       slides[currentSlide].classList.remove('active');
-      dots[currentSlide].classList.remove('active');
+      if (dots[currentSlide]) dots[currentSlide].classList.remove('active');
+      
       currentSlide = (index + slides.length) % slides.length;
+      
       slides[currentSlide].classList.add('active');
-      dots[currentSlide].classList.add('active');
+      if (dots[currentSlide]) dots[currentSlide].classList.add('active');
       if (window.lucide) lucide.createIcons();
     }
 
@@ -115,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function startAutoplay() {
       if (autoplayInterval) clearInterval(autoplayInterval);
-      autoplayInterval = setInterval(nextSlide, 2000); // exact 2 seconds
+      autoplayInterval = setInterval(nextSlide, 2000); // exactly 2 seconds continuous
     }
 
     function stopAutoplay() {
@@ -143,12 +148,16 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    carouselWrapper.addEventListener('mouseenter', stopAutoplay);
-    carouselWrapper.addEventListener('mouseleave', startAutoplay);
+    wrapper.addEventListener('mouseenter', stopAutoplay);
+    wrapper.addEventListener('mouseleave', startAutoplay);
 
-    // Initial launch of 2-second continuous animation
+    // Start 2-second continuous animation
     startAutoplay();
   }
+
+  // Initialize NammaKisan and InterviewIQ carousels
+  setupProjectCarousel('nammakisan-carousel', 'nk-prev-btn', 'nk-next-btn');
+  setupProjectCarousel('interviewiq-carousel', 'iiq-prev-btn', 'iiq-next-btn');
 
   /* --------------------------------------------------------------------------
      3. Sticky Navbar & Active Scroll Spy
