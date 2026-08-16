@@ -1,6 +1,6 @@
 /**
  * Soham Patil Portfolio — Data Store
- * Structured data for certifications, projects, and credentials.
+ * Structured data for verified certifications, projects, and credentials.
  */
 
 const PORTFOLIO_DATA = {
@@ -21,102 +21,59 @@ const PORTFOLIO_DATA = {
     "meta-js": {
       title: "Programming with JavaScript",
       issuer: "Meta",
-      platform: "Coursera / Meta Career Programs",
-      date: "July 2026",
-      credentialId: "META-JS-2026-SP",
+      platform: "Coursera",
+      date: "July 13, 2026",
+      credentialId: "98N1M3C53F7I",
+      verificationUrl: "https://coursera.org/verify/98N1M3C53F7I",
+      image: "assets/certificates/meta-javascript-certificate.png",
       skills: ["JavaScript (ES6+)", "OOP in JS", "Asynchronous Programming", "Jest Unit Testing", "Data Structures in JS"],
-      summary: "Comprehensive certification covering modern JavaScript development, object-oriented concepts, functional programming, DOM manipulation, asynchronous JavaScript (Promises, async/await), and writing unit tests with Jest.",
-      verificationUrl: "https://github.com/Soham-patil18"
+      summary: "Authorized by Meta and offered through Coursera. Validates proficiency in modern JavaScript, functional programming, object-oriented concepts, DOM manipulation, asynchronous programming with Promises & async/await, and unit testing with Jest."
     },
     "meta-html-css": {
-      title: "HTML and CSS in Depth",
+      title: "HTML and CSS in depth",
       issuer: "Meta",
-      platform: "Coursera / Meta Career Programs",
-      date: "July 2026",
-      credentialId: "META-HTMLCSS-2026-SP",
-      skills: ["Semantic HTML5", "Modern CSS3", "CSS Grid & Flexbox", "Responsive Design", "Accessibility (WCAG)", "CSS Animations"],
-      summary: "In-depth training on semantic web architecture, modern responsive CSS layouts using Flexbox and CSS Grid, cross-device breakpoints, fluid typography, transitions, animations, and web accessibility standards.",
-      verificationUrl: "https://github.com/Soham-patil18"
+      platform: "Coursera",
+      date: "July 17, 2026",
+      credentialId: "7810YDDDE3HL",
+      verificationUrl: "https://coursera.org/verify/7810YDDDE3HL",
+      image: "assets/certificates/meta-html-css-certificate.png",
+      skills: ["Semantic HTML5", "Modern CSS3", "CSS Grid & Flexbox", "Responsive Design", "Web Accessibility (WCAG)", "CSS Animations"],
+      summary: "Authorized by Meta and offered through Coursera. Demonstrates in-depth mastery of semantic HTML5, modern CSS3 layout systems (Flexbox and Grid), responsive web design across viewports, fluid typography, animations, and web accessibility standards."
     },
     "tata-forage": {
       title: "GenAI Powered Data Analytics Job Simulation",
       issuer: "TATA",
       platform: "Forage",
-      date: "June 2026",
-      credentialId: "TATA-FORAGE-GENAI-2026",
-      skills: ["Generative AI Tools", "Data Analysis & Interpretation", "Business Metrics Storytelling", "Executive Presentation"],
-      summary: "Completed a simulated enterprise analytics assignment with TATA via Forage, analyzing business metrics using generative AI tools, formulating data-backed recommendations, and crafting executive-level insights.",
-      verificationUrl: "https://github.com/Soham-patil18"
+      date: "June 25, 2026",
+      credentialId: "Q57uMJM5s9pbmKHXr",
+      userCode: "6a3cec1ea27deb0c56362ddf",
+      verificationUrl: "https://www.theforage.com/",
+      image: "assets/certificates/tata-forage-genai-certificate.png",
+      skills: ["Exploratory Data Analysis", "Risk Profiling", "Predicting Delinquency with AI", "Data Storytelling & Strategy", "AI-Driven Business Insights"],
+      summary: "Issued by Forage in collaboration with TATA. Completed practical tasks in exploratory data analysis and risk profiling, predicting delinquency with AI, and crafting executive-level business reports and data storytelling for collections strategies."
+    },
+    "bec-contest": {
+      title: "Certificate of Appreciation — 1st Place Winner",
+      issuer: "Basaveshwar Engineering College, Bagalkote",
+      platform: "Internal Quality Assurance Cell (IQAC)",
+      date: "February 21, 2026",
+      credentialId: "BEC-IQAC-PC-2026",
+      verificationUrl: "https://github.com/Soham-patil18",
+      image: "assets/certificates/bec-project-contest-1st-prize.jpg",
+      skills: ["Software Engineering", "Full Stack Development", "Database Architecture", "Problem Solving", "Technical Presentation"],
+      summary: "Secured First Place in the PROJECT CONTEST organized for the IT and Circuit branches (AIML, CSE, ECE, EEE, ISE, MCA) held on 21st February, 2026 at Basaveshwar Engineering College, Bagalkote."
     }
   },
 
   projects: {
     "nammakisan": {
-      title: "NammaKisan – Farmer-to-Consumer Platform",
+      title: "NammaKisan — Farmer-to-Consumer Platform",
       category: "fullstack",
       date: "Dec 2025",
       stack: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "Cloudinary", "Python", "MySQL", "Bootstrap", "Git"],
-      description: "A full-stack agricultural marketplace platform designed to connect farmers directly with consumers. Enables direct product listings, fair price discovery, inventory management, and CRUD operations on produce catalogs without middlemen.",
+      description: "A full-stack agricultural marketplace platform designed to connect farmers directly with consumers.",
       github: "https://github.com/Soham-patil18/NammaKisan",
-      live: "https://nammakisan-frontend1.onrender.com",
-      highlights: [
-        "Architected responsive frontend with React.js and Bootstrap for catalog browsing and cart management.",
-        "Implemented MySQL and MongoDB database schemas for product inventory and transaction records.",
-        "Integrated Cloudinary API for image uploads of farmer produce.",
-        "Engineered secure authentication with JWT and password encryption."
-      ]
-    },
-    "bec-billdesk": {
-      title: "BEC Bill Desk – Online College Fee Payment System",
-      category: "fullstack",
-      date: "Mar 2025",
-      stack: ["Next.js", "React", "JavaScript", "Java", "Python", "MySQL", "Bootstrap", "Git"],
-      description: "A web-based institutional billing and fee management system developed for college administration and students. Enables real-time fee queries, payment tracking, and receipt generation.",
-      github: "https://github.com/Soham-patil18/BEC-BILLDESK",
-      highlights: [
-        "Structured secure student fee breakdown tables and transaction history views.",
-        "Implemented MySQL database backend to manage student profiles, fees, and invoice records.",
-        "Engineered responsive user interface using Next.js and modern JavaScript components."
-      ]
-    },
-    "interviewiq": {
-      title: "InterviewIQ AI – Interview Prep & Assessment Platform",
-      category: "fullstack",
-      date: "Jan 2026",
-      stack: ["JavaScript", "Python", "Java", "MongoDB", "MySQL", "HTML5", "CSS3", "Bootstrap", "Git"],
-      description: "An AI-assisted interview preparation platform designed to help students and candidates practice domain-specific technical questions, evaluate mock assessments, and monitor preparation metrics.",
-      github: "https://github.com/Soham-patil18/InterviewIQ-AI",
-      highlights: [
-        "Created modular interview question bank categorized by technology and difficulty.",
-        "Implemented MongoDB storage for candidate test scores and response logging.",
-        "Built responsive web assessment screens with timer and scoring mechanisms."
-      ]
-    },
-    "simon-game": {
-      title: "Simon Memory Game",
-      category: "frontend",
-      date: "Feb 2025",
-      stack: ["HTML5", "CSS3", "JavaScript (ES6+)", "Web Audio API"],
-      description: "An interactive browser-based memory sequencing game engineered with vanilla JavaScript and optimized event listeners for fast responsiveness.",
-      github: "https://github.com/Soham-patil18/SimonGame",
-      highlights: [
-        "Algorithmic pattern generation with progressive difficulty and audio-visual cues.",
-        "Optimized DOM event handling for 40% faster responsiveness.",
-        "High score persistence and clean responsive layout."
-      ]
-    },
-    "amazon-clone": {
-      title: "Amazon UI Clone & Responsive Layouts",
-      category: "frontend",
-      date: "Feb 2025",
-      stack: ["HTML5", "CSS3", "JavaScript", "Flexbox", "CSS Grid"],
-      description: "High-fidelity frontend UI clones of major platforms (Amazon, BMW, Spotify, Flipkart) built to practice complex grid layouts, responsive navigation menus, and cross-browser consistency.",
-      github: "https://github.com/Soham-patil18",
-      highlights: [
-        "Implemented pixel-accurate multi-level navigation bar, banner carousels, and product cards.",
-        "Fluid responsiveness across desktop, tablet, and mobile viewports.",
-        "Organized CSS architecture utilizing modern variables and Flexbox/Grid modules."
-      ]
+      live: "https://nammakisan-frontend1.onrender.com"
     }
   }
 };

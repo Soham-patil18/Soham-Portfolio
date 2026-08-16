@@ -1,6 +1,6 @@
 /**
  * Soham Patil Portfolio — Main Application Script
- * Interactive Constellation Canvas, Scroll-Spy Navigation, Modals, Audio Synthesizer & Toast Alerts
+ * Interactive Constellation Canvas, Scroll-Spy Navigation, High-Res Certificate Previews, Modals & Audio Synthesizer
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* --------------------------------------------------------------------------
-     1. Interactive Constellation Particle Canvas (Exact Friend's Feature)
+     1. Interactive Constellation Particle Canvas
      -------------------------------------------------------------------------- */
   const canvas = document.getElementById('particle-canvas');
   if (canvas) {
@@ -95,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function handleScroll() {
     const scrollY = window.scrollY;
 
-    // Navbar scrolled background
     if (navbar) {
       if (scrollY > 30) {
         navbar.classList.add('scrolled');
@@ -104,7 +103,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Back to top visibility
     if (backToTopBtn) {
       if (scrollY > 400) {
         backToTopBtn.classList.add('visible');
@@ -113,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Section scroll-spy
     sections.forEach(section => {
       const sectionHeight = section.offsetHeight;
       const sectionTop = section.offsetTop - 140;
@@ -225,50 +222,65 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Certificate Modal Handlers
-  const certButtons = document.querySelectorAll('.cert-view-btn');
+  // Certificate Modal Handlers (Previews with real Certificate Image)
+  const certElements = document.querySelectorAll('.cert-view-btn, .cert-preview-img-wrap');
   const certModalTitle = document.getElementById('cert-modal-title');
   const certModalOrg = document.getElementById('cert-modal-org');
   const certModalContent = document.getElementById('cert-modal-content');
   const certModalClose = document.getElementById('cert-modal-close');
 
-  certButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const certKey = btn.getAttribute('data-cert');
+  certElements.forEach(el => {
+    el.addEventListener('click', () => {
+      const certKey = el.getAttribute('data-cert');
+      if (!certKey) return;
       const certData = PORTFOLIO_DATA.certifications[certKey];
 
       if (certData && certModalContent) {
         certModalTitle.textContent = certData.title;
-        certModalOrg.textContent = `${certData.issuer} • ${certData.platform}`;
+        certModalOrg.textContent = `${certData.issuer} • ${certData.platform} (${certData.date})`;
+
+        let verifyBtnHtml = '';
+        if (certData.verificationUrl) {
+          verifyBtnHtml = `
+            <a href="${certData.verificationUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="flex: 1;">
+              <i data-lucide="shield-check"></i>
+              <span>Verify Official Credential</span>
+            </a>
+          `;
+        }
 
         certModalContent.innerHTML = `
-          <div style="display: flex; flex-direction: column; gap: 20px;">
-            <div style="background: rgba(23, 42, 69, 0.7); border: 1px solid rgba(41, 121, 255, 0.3); border-radius: 12px; padding: 24px; text-align: center;">
-              <span style="display: inline-block; font-size: 0.75rem; font-weight: 700; color: #00BCD4; background: rgba(0, 188, 212, 0.15); padding: 4px 12px; border-radius: 9999px; margin-bottom: 12px;">VERIFIED CREDENTIAL</span>
-              <p style="font-size: 0.85rem; color: #94a3b8; text-transform: uppercase;">This is to certify that</p>
-              <h3 style="font-size: 1.4rem; font-weight: 800; color: #ffffff; margin: 4px 0 10px;">Soham Patil</h3>
-              <p style="font-size: 0.85rem; color: #94a3b8;">has completed the course requirement for</p>
-              <h4 style="font-size: 1.2rem; color: #2979FF; margin: 4px 0 8px;">${certData.title}</h4>
-              <p style="font-size: 0.9rem; color: #94a3b8;">Issued by <strong>${certData.issuer}</strong> via ${certData.platform}</p>
+          <div class="modal-cert-viewer">
+            <div class="modal-cert-img-container">
+              <img src="${certData.image}" alt="${certData.title}" class="modal-full-cert-img">
             </div>
-
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-              <div style="background: rgba(23, 42, 69, 0.5); padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(41, 121, 255, 0.15);">
-                <strong style="display: block; font-size: 0.75rem; color: #64748b; text-transform: uppercase;">Completion Date</strong>
-                <span style="color: #ffffff; font-weight: 600;">${certData.date}</span>
+            
+            <div class="modal-cert-meta">
+              <div class="meta-row">
+                <div>
+                  <strong style="color: #64748b; font-size: 0.78rem; text-transform: uppercase;">Issued To</strong>
+                  <p style="font-weight: 700; color: #ffffff;">Soham Patil</p>
+                </div>
+                <div>
+                  <strong style="color: #64748b; font-size: 0.78rem; text-transform: uppercase;">Issue Date</strong>
+                  <p style="font-weight: 700; color: #00BCD4;">${certData.date}</p>
+                </div>
+                <div>
+                  <strong style="color: #64748b; font-size: 0.78rem; text-transform: uppercase;">Credential / Verification ID</strong>
+                  <p style="font-weight: 700; color: #2979FF; font-family: var(--font-mono); font-size: 0.85rem;">${certData.credentialId || 'Verified'}</p>
+                </div>
               </div>
-              <div style="background: rgba(23, 42, 69, 0.5); padding: 12px 16px; border-radius: 8px; border: 1px solid rgba(41, 121, 255, 0.15);">
-                <strong style="display: block; font-size: 0.75rem; color: #64748b; text-transform: uppercase;">Credential ID</strong>
-                <span style="color: #00BCD4; font-weight: 600;">${certData.credentialId}</span>
+
+              <p style="font-size: 0.92rem; color: #94a3b8; line-height: 1.6; margin-top: 14px;">${certData.summary}</p>
+
+              <div style="display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap;">
+                ${verifyBtnHtml}
+                <a href="${certData.image}" target="_blank" download class="btn btn-outline" style="flex: 1;">
+                  <i data-lucide="download"></i>
+                  <span>Download High-Res Image</span>
+                </a>
               </div>
             </div>
-
-            <p style="font-size: 0.92rem; color: #94a3b8; line-height: 1.6;">${certData.summary}</p>
-
-            <a href="${certData.verificationUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-primary w-full">
-              <i data-lucide="external-link"></i>
-              <span>View Profile Credentials</span>
-            </a>
           </div>
         `;
 
@@ -292,7 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
     simonModalClose.addEventListener('click', () => closeModal(simonModal));
   }
 
-  // Close modals on background or ESC
+  // Close modals on backdrop or ESC
   document.querySelectorAll('.modal').forEach(modal => {
     const backdrop = modal.querySelector('.modal-backdrop');
     if (backdrop) {
@@ -397,7 +409,6 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       playTone('wrong');
       if (levelTitle) levelTitle.textContent = "Game Over! Press Start to Retry";
-      showToast("Game Over! Try again!");
       startOver();
     }
   }
@@ -436,134 +447,6 @@ document.addEventListener('DOMContentLoaded', () => {
       startOver();
       if (levelTitle) levelTitle.textContent = "Press Start to Play";
       if (currentScoreVal) currentScoreVal.textContent = 0;
-    });
-  }
-
-  /* --------------------------------------------------------------------------
-     6. 1-Click Copy-to-Clipboard & Toast Alerts
-     -------------------------------------------------------------------------- */
-  const copyButtons = document.querySelectorAll('.btn-copy');
-  const toast = document.getElementById('toast');
-  const toastMessage = document.getElementById('toast-message');
-  let toastTimeout = null;
-
-  function showToast(message) {
-    if (!toast || !toastMessage) return;
-    toastMessage.textContent = message;
-    toast.classList.add('show');
-    if (toastTimeout) clearTimeout(toastTimeout);
-    toastTimeout = setTimeout(() => {
-      toast.classList.remove('show');
-    }, 3000);
-  }
-
-  copyButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const textToCopy = btn.getAttribute('data-copy');
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(textToCopy).then(() => {
-          showToast(`Copied "${textToCopy}" to clipboard!`);
-        }).catch(() => {
-          fallbackCopy(textToCopy);
-        });
-      } else {
-        fallbackCopy(textToCopy);
-      }
-    });
-  });
-
-  function fallbackCopy(text) {
-    const textArea = document.createElement('textarea');
-    textArea.value = text;
-    textArea.style.position = 'fixed';
-    textArea.style.opacity = '0';
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
-    try {
-      document.execCommand('copy');
-      showToast(`Copied "${text}" to clipboard!`);
-    } catch (err) {
-      showToast('Could not copy text.');
-    }
-    document.body.removeChild(textArea);
-  }
-
-  /* --------------------------------------------------------------------------
-     7. Contact Form Handling
-     -------------------------------------------------------------------------- */
-  const contactForm = document.getElementById('contact-form');
-  const nameInput = document.getElementById('contact-name');
-  const emailInput = document.getElementById('contact-email');
-  const subjectInput = document.getElementById('contact-subject');
-  const messageInput = document.getElementById('contact-message');
-  const submitBtn = document.getElementById('contact-submit-btn');
-
-  if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      let isValid = true;
-
-      if (!nameInput.value.trim()) {
-        nameInput.parentElement.classList.add('has-error');
-        isValid = false;
-      } else {
-        nameInput.parentElement.classList.remove('has-error');
-      }
-
-      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!emailInput.value.trim() || !emailPattern.test(emailInput.value.trim())) {
-        emailInput.parentElement.classList.add('has-error');
-        isValid = false;
-      } else {
-        emailInput.parentElement.classList.remove('has-error');
-      }
-
-      if (!messageInput.value.trim()) {
-        messageInput.parentElement.classList.add('has-error');
-        isValid = false;
-      } else {
-        messageInput.parentElement.classList.remove('has-error');
-      }
-
-      if (!isValid) {
-        showToast('Please fill in all required fields.');
-        return;
-      }
-
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = '<i data-lucide="loader"></i> Sending message...';
-        if (window.lucide) lucide.createIcons();
-      }
-
-      setTimeout(() => {
-        showToast('Message sent! Opening email client...');
-        const mailSubject = encodeURIComponent(subjectInput.value.trim() || `Portfolio Inquiry from ${nameInput.value.trim()}`);
-        const mailBody = encodeURIComponent(`Hi Soham,\n\n${messageInput.value.trim()}\n\nFrom: ${nameInput.value.trim()} (${emailInput.value.trim()})`);
-        window.location.href = `mailto:sohampatil49690@gmail.com?subject=${mailSubject}&body=${mailBody}`;
-
-        contactForm.reset();
-        if (submitBtn) {
-          submitBtn.disabled = false;
-          submitBtn.innerHTML = '<i data-lucide="check"></i> Message Prepared!';
-          if (window.lucide) lucide.createIcons();
-          setTimeout(() => {
-            submitBtn.innerHTML = '<i data-lucide="send"></i> Send Message';
-            if (window.lucide) lucide.createIcons();
-          }, 3000);
-        }
-      }, 600);
-    });
-
-    [nameInput, emailInput, messageInput].forEach(input => {
-      if (input) {
-        input.addEventListener('input', () => {
-          if (input.value.trim()) {
-            input.parentElement.classList.remove('has-error');
-          }
-        });
-      }
     });
   }
 });
